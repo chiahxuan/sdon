@@ -1,0 +1,139 @@
+<style>
+  .tt-testimonial-wrap{
+    background: {{ section.settings.bg_color}};
+  }
+</style>
+<div data-section-id="{{ section.id }}"  data-section-type="testimonial-wrap" class="tt-testimonial-wrap bg_img1">
+  <div class="testimonial-bg bg_img2 {% if section.settings.parallax_enable %} parallex {% endif %}" data-source-url="{{ section.settings.image | img_url: 'master' }}" style="background-color:{{section.settings.bg_color}};background-image:url('{{ section.settings.image | img_url: 'master' }}'); {% if section.settings.parallax_enable %} background-position: 50% 65.8718%; {% else %} background-size: contain; {% endif %}">
+    <div class="pattern">
+    <div class="container">  
+      <div class="row">
+      <div class="grid__item testimonials_wrap owl-carousel" data-aos="fade-up">
+        {% if section.blocks.size > 0 %}  
+        {% for block in section.blocks %}    
+        {%- assign block_width = 'small-grid__item' -%}      
+        <div class="grid__item {{ block_width }}"> 
+          <div class="testimonial-block col-sm-12">
+            <div class="authorimg testimonial-image">
+              {% if  block.settings.image_1 != blank %}
+              <img height="100" width="100" src="{{  block.settings.image_1 | img_url: "master" }}" alt="{{  block.settings.image_1_heading }}" />
+              {% endif %} 
+            </div>
+            <div class="testimonial-detail">
+              {% if block.settings.text_desc != blank %}
+              <div class="testimonial-desc" style="color:{{block.settings.des_color }}">
+                {{ block.settings.text_desc }}
+              </div>
+              {% endif %} 
+              <div class="grid__item"> 
+                {% if block.settings.author_name != blank %}
+                <div class="testimonial-user-title" style="color:{{block.settings.author_color }}">
+                  {{ block.settings.author_name }}
+                </div>
+                <div class="testimonial-user-desc" style="color:{{block.settings.author_descolor }}">{{ block.settings.author_designation }}</div>
+                {% endif %}
+              </div>
+            </div> 
+          </div>
+        </div>
+        {% endfor %}         
+        {% endif %}   
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+{{ 'parallax.min.js' | asset_url | script_tag }}
+{% schema %}
+{
+"name": "Testimonials",
+"max_blocks":6,
+"class":"testimonials",
+"settings": [
+{
+"type": "color",
+"id": "bg_color",
+"label": "Background Color",
+"default":"#000"
+},
+{
+"type": "checkbox",
+"id": "parallax_enable",
+"label": "Show Parallax Enable"
+}, 
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+}
+],
+"blocks": [
+{
+"type": "text",
+"name": "Testimonial",
+"settings": [
+
+{
+"type": "textarea",
+"id": "text_desc",
+"label": "Description"
+},
+{
+"type": "color",
+"id": "des_color",
+"label": "Description Color",
+"default":"#000"
+},
+{
+"type": "image_picker",
+"id": "image_1",
+"label": "Image",
+"info": "Size: 140x140"
+},
+{
+"type": "text",
+"id": "author_name",
+"label": "author name"
+},
+{
+"type": "text",
+"id": "author_designation",
+"label": "Designation"
+},
+{
+"type": "color",
+"id": "author_color",
+"label": "Author Color",
+"default":"#000"
+},
+{
+"type": "color",
+"id": "author_descolor",
+"label": "Designation Color",
+"default":"#000"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Testimonials",
+"category": "TemplateTrip",
+"blocks": [
+{
+"type": "text"
+},
+{
+"type": "text"
+},
+{
+"type": "text"
+}       
+
+]
+}
+]
+}
+{% endschema %}
+<script>jQuery(document).ready(function(){"use strict";var isMobile=/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);if(!isMobile){if(jQuery(".parallex").length){jQuery(".parallex:not(.invert_true)").sitManParallex({invert:!1})};if(jQuery(".parallex.invert_true").length){jQuery(".parallex").sitManParallex({invert:!0})}}else{jQuery(".parallex:not(.invert_true)").sitManParallex({invert:!0});jQuery(".parallex.invert_true").sitManParallex({invert:!0})}});</script><!--End_AZEXO_sections/parallax.liquid_Section-->

@@ -1,0 +1,85 @@
+<div id="cmsgallery" class="gallery" data-aos="fade-up">
+  <i class="mdi mdi-instagram" aria-hidden="true"></i>
+  {% if section.settings.gallery_title != blank %}<a target="_blank" href="{{ section.settings.gallery_title_url }}" class="tt-title">{{ section.settings.gallery_title }}</a>{% endif %}  
+  <div class="image-content owl-carousel">
+    {% for block in section.blocks %}
+    <div class="gallery-img">
+      <a href="{{ block.settings.gallery_url }}">
+        <img height="360" width="240" src="{{ block.settings.gallery | img_url: "240x360" }}" alt="gallery" />
+      </a>
+      <span class="bloglinks">
+        <a class="icon zoom" data-lightbox="example-1" href="{{ block.settings.gallery | img_url: 'master' }}" title="Click to view Full Image">
+          <i class="mdi mdi-magnify"></i>
+        </a> 
+      </span>
+    </div>
+    {% endfor %}
+  </div>
+</div> 
+<style>
+  #cmsgallery > i{
+    color : {{ section.settings.instagram_icon_color }};
+  }
+  #cmsgallery .tt-title{
+    color : {{ section.settings.gallery_title_color }};
+  } 
+</style>
+{% schema %}
+{
+"name": "Gallery",
+"class": "index-section cms-gallery",
+"settings": [
+{
+"type": "color",
+"id": "instagram_icon_color",
+"label": "Instagram Icon Color"
+},
+{
+"type": "url",
+"id": "gallery_title_url",
+"label": "Instagram link"
+},
+{
+"type": "text",
+"id": "gallery_title",
+"label": "Gallery title",
+"default": "Gallery"
+},
+{
+"type": "color",
+"id": "gallery_title_color",
+"label": "Gallery title color"
+}
+],
+"blocks": [
+{
+"type": "text",
+"name": "gallery",
+"settings": [
+{	
+"type": "image_picker",
+"id": "gallery",
+"label": "Gallery Image"
+},
+{
+"type": "url",
+"id": "gallery_url",
+"label": "Gallery Url"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Gallery",
+"category": "TT CMS section"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,289 @@
+<style>
+  .cmstabbanner .tababnnerblock .block_image .tabicon .banner-icon{
+    color: {{ section.settings.icon_color }};
+    background: {{ section.settings.icon_color }};}
+  .cmstabbanner .block_image .tabicon{
+    background: {{ section.settings.iconbg_color }};}  
+  .cmstabbanner .tababnnerblock .block_image .tabicon:hover .banner-icon{
+    color: {{ section.settings.icon_hover_color }};
+    background: {{ section.settings.icon_hover_color }};}
+  .cmstabbanner .block_image .tabicon:hover{
+    background: {{ section.settings.iconbg_hvrcolor }};}  
+  .cmstabbanner .tababnnerblock .right_bannerblock .subtitle{
+    color: {{ section.settings.subtitle_color }};
+  }
+  .cmstabbanner .tababnnerblock .right_bannerblock .title{
+    color: {{ section.settings.title_color }};
+  }
+  .cmstabbanner .tababnnerblock .right_bannerblock .description{
+    color: {{ section.settings.desc_color }};
+  }
+  .cmstabbanner .tababnnerblock .right_bannerblock .banner-button .btn{
+    color: {{ section.settings.btn_txt_color }};
+    background: {{ section.settings.btn_bg_color }}; 
+  }
+  .cmstabbanner .tababnnerblock .right_bannerblock .banner-button .btn:hover,
+  .cmstabbanner .tababnnerblock .right_bannerblock .banner-button .btn:focus{
+    color: {{ section.settings.btn_hover_txt_color }};
+  }
+  .cmstabbanner .tababnnerblock .right_bannerblock .banner-button .btn:after{
+    background: {{ section.settings.btn_hover_bg_color }}; 
+  }
+  .cmstabbanner .tababnnerblock .right_bannerblock .counter_block .counter .counter-number{
+    color: {{ section.settings.counter_num_clr }};
+  }
+  .cmstabbanner .tababnnerblock .right_bannerblock .counter_block .counter .counter-subtitle{
+    color: {{ section.settings.counter_subtitle_clr }};
+  }
+</style>
+<div class="cmstabbanner bg_img2" style="background: {{ section.settings.bg_color }};" data-aos="fade-up">
+  <div class="container">
+    <div class="row">
+      <div class="tababnnerblock bg_img1">
+        <div class="left_bannerblock col-sm-4">
+          {% if section.settings.banner != blank %}
+          <a href="{% if section.settings.banner_url != blank %}{{ section.settings.banner_url }}{% else %}#{% endif %}">
+            <img width="345" height="540" src="{{ section.settings.banner | img_url:"345x540" }}" alt="banner1">
+          </a>
+          {% endif %}
+        </div>
+        <div class="right_bannerblock col-sm-8">
+          {% if section.blocks.size > 0 %}
+          <div class="block_image nav nav-tabs col-sm-4">  
+            {%  assign block_size = 1 %} 
+            {% for block in section.blocks %}
+            <div class="tabicon tab-btn {% if block_size == 1 %}active{% endif %}" href="#tabs-{{ block.id }}" id="icon-{{ block.id }}" data-toggle="tab">
+              <a href="#tabs-{{ block.id }}" id="icon-{{ block.id }}" data-toggle="tab" class="banner-icon">
+              </a>
+            </div>
+            <style> 
+              .cmstabbanner .tababnnerblock .block_image .tabicon #icon-{{ block.id }}.banner-icon 
+              { mask-image:url({{ block.settings.tab_icon | img_url: '65x65'}});
+                -webkit-mask-image:url({{ block.settings.tab_icon | img_url: '65x65'}});}               
+            </style>
+            {% endfor %}
+          </div>
+          {% endif %}   
+          {% if section.blocks.size > 0 %}
+          <div class="block_content col-sm-8">
+            {%  assign block_size = 1 %} 
+            {% for block in section.blocks %}
+            {{block.size}}
+            <div id="tabs-{{ block.id }}" data-col="tabs-{{ block.id }}" class="contents tab-pane fade {% if block_size == 1 %}in active{% endif %}">
+              {% if block.settings.subtitle != blank %}
+              <div class="subtitle">{{ block.settings.subtitle }}</div>
+              {% endif %}
+              {% if block.settings.title != blank %}
+              <div class="title">{{ block.settings.title }}</div>
+              {% endif %}
+              {% if block.settings.desc != blank %}
+              <div class="description">{{ block.settings.desc }}</div>
+              {% endif %}
+              <div class="counter_block">
+                <div class="counter">
+                  <span class="counter-number">{{ block.settings.number1 }}</span>
+                  <span class="counter-subtitle">{{ block.settings.subtitle1 }}</span>
+                </div>
+                <div class="counter">
+                  <span class="counter-number">{{ block.settings.number2 }}</span>
+                  <span class="counter-subtitle">{{ block.settings.subtitle2 }}</span>
+                </div>
+                <div class="counter">
+                  <span class="counter-number">{{ block.settings.number3 }}</span>
+                  <span class="counter-subtitle">{{ block.settings.subtitle3 }}</span>
+                </div>
+              </div>
+              {% if block.settings.btn_link != blank %}
+              <div class="banner-button">
+                <a class="btn" href="{% if block.settings.btn_link != blank %}{{ block.settings.btn_link }}{% else %}#{% endif %}">{{ block.settings.btn_txt }}</a>
+              </div>
+              {% endif %}    
+            </div>
+            {% assign block_size = block_size | plus: 1 %}
+            {% endfor %}
+          </div> 
+          {% endif %} 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+"name": "Cms TabBanner",
+"class": "index-section cmstabbanner",
+"max_blocks":3,
+"settings": [
+{
+"type": "color",
+"id": "bg_color",
+"label": "background color",
+"default":"#fff"
+},
+{
+"type": "image_picker",
+"id": "banner",
+"label": "Banner image"
+},
+{
+"type": "url",
+"id": "banner_url",
+"label": "Banner url"
+},
+{
+"type": "color",
+"id": "icon_color",
+"label": "banner Icon Color",
+"default":"#000"
+},
+{
+"type": "color",
+"id": "iconbg_color",
+"label": "banner Icon background Color",
+"default":"#000"
+},
+{
+"type": "color",
+"id": "icon_hover_color",
+"label": "banner Icon Hover Color",
+"default":"#000"
+},
+{
+"type": "color",
+"id": "iconbg_hvrcolor",
+"label": "banner Icon background hover Color",
+"default":"#000"
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Title Color",
+"default": "#111111"
+},
+{
+"type": "color",
+"id": "subtitle_color",
+"label": "Subtitle Color",
+"default": "#111111"
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "Description Color",
+"default": "#111111"
+},
+{
+"type": "color",
+"id": "btn_txt_color",
+"label": "Button text Color",
+"default": "#ffffff"
+},
+{
+"type": "color",
+"id": "btn_bg_color",
+"label": "Button background Color",
+"default": "#c40529"
+},
+{
+"type": "color",
+"id": "btn_hover_txt_color",
+"label": "Button Hover text Color",
+"default": "#ffffff"
+},
+{
+"type": "color",
+"id": "btn_hover_bg_color",
+"label": "Button Hover background Color",
+"default": "#111111"
+},
+{
+"type": "color",
+"id": "counter_num_clr",
+"label": "Counter Number Color",
+"default": "#c40529"
+},
+{
+"type": "color",
+"id": "counter_subtitle_clr",
+"label": "Counter Subtitle Color",
+"default": "#fff"
+}
+],
+"blocks": [
+{
+"type": "s_text",
+"name": "tabicon",
+"settings": [
+{
+"type": "image_picker",
+"id": "tab_icon",
+"label": "tab Icon",
+"info": "Size: 65x65"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "text",
+"id": "subtitle",
+"label": "Sub title"
+},
+{
+"type": "textarea",
+"id": "desc",
+"label": "Description"
+},
+{
+"type": "text",
+"id": "btn_txt",
+"label": "Button text"
+},
+{
+"type": "url",
+"id": "btn_link",
+"label": "Button Link"
+},
+{
+"type": "text",
+"id": "number1",
+"label": "Counter1"
+},
+{
+"type": "text",
+"id": "number2",
+"label": "Counter2"
+},
+{
+"type": "text",
+"id": "number3",
+"label": "Counter3"
+},
+{
+"type": "text",
+"id": "subtitle1",
+"label": "counter subtitle1"
+},
+{
+"type": "text",
+"id": "subtitle2",
+"label": "counter subtitle2"
+},
+{
+"type": "text",
+"id": "subtitle3",
+"label": "counter subtitle3"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Cms TabBanner",
+"category": "TT CMS section"
+}
+]
+}
+{% endschema %}
+

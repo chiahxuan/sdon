@@ -1,0 +1,252 @@
+<!-- /templates/collection.liquid -->
+{% comment %}
+The contents of the collection.liquid template can be found in /sections/collection-template.liquid
+{% endcomment %}
+{%- assign products_per_page = 12 -%}
+<div class="container">
+  <div class="row">
+    <!-- /snippets/collection.liquid -->
+    {% if settings.collection_sidebar_use == "left_sidebar" %}
+    <div class="content_wrap left-sidebar-column">
+      <div class="col-xs-12 col-sm-3 left-sidebar sidebar">
+        {% render 'collection-sidebar' %}
+      </div>
+      <div class="col-xs-12 col-sm-9 collection_wrapper collection_right">
+        {% if settings.collections_masonry %}  
+        {% render 'product-masonry',products_per_page: 12 ,results: collection, enable_sorting: section.settings.enable_sorting %}
+        {% else %}
+        {% render 'collection-template',products_per_page: 12 ,results: collection, enable_sorting: section.settings.enable_sorting %}
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if settings.collection_sidebar_use == "right_sidebar" %}
+    <div class="content_wrap right-sidebar-column">
+      <div class="col-xs-12 col-sm-9 collection_wrapper collection_left">
+        {% if settings.collections_masonry %}  
+        {% render 'product-masonry',products_per_page: 12 ,results: collection, enable_sorting: section.settings.enable_sorting %}
+        {% else %}
+        {% render 'collection-template',products_per_page: 12 ,results: collection, enable_sorting: section.settings.enable_sorting%}
+        {% endif %}
+
+      </div>
+      <!-- /snippets/collection.liquid -->
+      <div class="col-xs-12 col-sm-3 right-sidebar sidebar">
+        {% render 'collection-sidebar' %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if settings.collection_sidebar_use == "full_width" %}
+
+    {% if settings.collections_masonry %}  
+    {% render 'product-masonry',products_per_page: 12 ,results: collection, enable_sorting: section.settings.enable_sorting %}
+    {% else %}
+    {% render 'collection-template',products_per_page: 12 ,results: collection, enable_sorting: section.settings.enable_sorting%}
+    {% endif %}
+
+    {% endif %}
+    {% if settings.collection_sidebar_use == "full_width" %}
+    {% if settings.collection_filter_pos == "left_filter" or settings.collection_filter_pos == "right_filter"%}
+    <div class="off-canvas-wrapper">
+      {% if settings.collection_filter_pos == "left_filter" %}  
+      <div class="off-canvas position-left  shop-has-sidebar is-transition-overlap">
+        {% elsif settings.collection_filter_pos == "right_filter" %}
+        <div class="off-canvas position-right  shop-has-sidebar is-transition-overlap">
+          {% endif %}
+          <div class="collection_sidebar">
+            {% if current_tags == blank %}
+            {% assign has_refined = false %} 
+            {% else %}
+            {% assign has_refined = true %} 
+            {% endif %}
+            <div class="sidebar-block">
+              <div class="refined-widgets">
+                <a href="javascript:void(0)" class="clear-all" {% if has_refined == false %}style="display:none"{% endif %}>
+                  {{ 'products.product.clear_all' | t }}
+                  <i class="mdi mdi-close-circle"></i>
+                </a>
+              </div>
+              {% render 'sidebar-category', enable_sidecategory: section.settings.enable_sidecategory, linkedlist: section.settings.linkedlist, linkedlist_title: section.settings.linkedlist_title %}
+              {% render 'facets', results: collection, collapse_on_larger_devices: section.settings.collapse_on_larger_devices, show_filter: section.settings.show_filter %}
+            </div> 
+            {% render 'sidebar-bestsellers', show_best_products: section.settings.show_best_products,  bestseller: section.settings.bestseller, product_rows: section.settings.product_rows, pro_img_width_height: section.settings.pro_img_width_height, limit: section.settings.limit %}  
+            {% render 'promo-banner', show_promo_banner: section.settings.show_promo_banner, promo_img: section.settings.promo_img, promo_link: section.settings.promo_link %}
+          </div>
+        </div>    
+        <div class="js-off-canvas-overlay is-overlay-fixed"></div>
+      </div>
+      {% endif %}
+      {% endif %}
+    </div>
+  </div>  
+</div>
+<script>
+  $(document).ready(function() {
+    $(".dt-menu-expand").click(function(event){
+      event.preventDefault();
+      if( $(this).hasClass("dt-mean-clicked") ){
+        $(this).text("+");
+        if( $(this).prev('ul').length ) {
+          $(this).prev('ul').slideUp(400);
+        } else {
+          $(this).prev('.megamenu-child-container').find('ul:first').slideUp(600);
+        }
+      } else {
+        $(this).text("-");
+        if( $(this).prev('ul').length ) {
+          $(this).prev('ul').slideDown(400);
+        } else{
+          $(this).prev('.megamenu-child-container').find('ul:first').slideDown(2000);
+        }
+      }
+
+      $(this).toggleClass("dt-mean-clicked");
+      return false;
+    });
+  });
+</script>
+{% schema %}
+{
+"name": "Collection",
+"class": "index-section tt-category",
+"settings": [
+{
+"type": "checkbox",
+"id": "enable_category",
+"label": "Enable Category"
+},
+{
+"type": "text",
+"id": "title_1",
+"default": "Category products",
+"label": "Heading"
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Collection Title Color",
+"default": "#fff"
+},
+{
+"type": "checkbox",
+"id": "enable_sidecategory",
+"label": "Enable sidebar category",
+"default": false
+},
+{
+"type": "link_list",
+"id": "linkedlist",
+"label": "Linklist"
+},
+{
+"type": "text",
+"id": "linkedlist_title",
+"label": "Heading"
+},
+{
+"type":"header",
+"content":"Collection Filter"
+},
+{
+"type":"checkbox",
+"id":"show_filter",
+"label":"Enable Filter",
+"default":true
+},
+{
+"type": "checkbox",
+"id": "collapse_on_larger_devices",
+"default": false,
+"label": "Collapse On Larger Devices"
+},
+{
+"type":"checkbox",
+"id":"enable_sorting",
+"label":"Enable Sorting",
+"default":true
+},
+{
+"type": "checkbox",
+"id": "enable_sidebar_multiple_choice",
+"label": "Multiple choices",
+"default": true,
+"info": "User can select multiple colors (size, brand...) or only one color (size, brand...)?"
+},   
+{
+"type": "checkbox",
+"id": "show_best_products",
+"label": "Enable best sellers",
+"default": false
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading"
+},
+{
+"type": "collection",
+"id": "bestseller",
+"label": "Collection"
+},
+{
+"type": "text",
+"id": "pro_img_width_height",
+"default": "80x104",
+"label": "Product image width and height (widthxheight)"
+},
+{
+"type": "text",
+"id": "limit",
+"label": "Product Limit",
+"default": "5"
+},
+{
+"type": "checkbox",
+"id": "product_rows",
+"label": "3 Rows Product"
+},
+{
+"type": "image_picker",
+"id": "promo_img",
+"label": "Image",
+"info": "Size: 328x500"
+},
+{
+"type": "url",
+"id": "promo_link",
+"label": "URL"
+},
+{
+"type": "text",
+"id": "promo_title",
+"label": "Heading"
+}
+],
+"blocks": [
+{
+"type": "text_collection",
+"name": "collection cms",
+"settings": [
+{
+"type": "image_picker",
+"id": "image_1",
+"label": "Image",
+"info": "Size: 140x140"
+},
+{
+"type": "text",
+"id": "collection_title",
+"label": "collection Title"
+},
+{
+"type": "collection",
+"id": "collection_cat_id",
+"label": "Select collection"
+}
+]
+}
+]
+}
+{% endschema %}

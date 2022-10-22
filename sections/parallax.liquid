@@ -1,0 +1,137 @@
+<style>.ttparallax .parallax-img .parallax-detail .tt-title
+  {color: {{ section.settings.title_color }};}
+  .ttparallax .parallax-img .parallax-detail .subtitle
+  {color: {{ section.settings.subtitle_color }};}
+  .ttparallax .parallax-img .parallax-detail .description
+  {color: {{ section.settings.desc_color }};}
+  .ttparallax .parallax-img .parallax-detail .parallax-button a.btn
+  {background: {{ section.settings.btn_bg_color }};
+    color: {{ section.settings.btn_txt_color }};}
+  .ttparallax .parallax-img .parallax-detail .parallax-button a.btn:hover,
+  .ttparallax .parallax-img .parallax-detail .parallax-button a.btn:focus,
+  .ttparallax .parallax-img .parallax-detail .parallax-button a.btn:active
+  {color: {{ section.settings.btn_hover_txt_color }};}
+  .ttparallax .parallax-img .parallax-detail .parallax-button a.btn::after
+  {background: {{ section.settings.btn_hover_bg_color }};}
+</style>
+<div class="ttparallax bg_img1" data-section-id="{{ section.id }}" >
+  <div class="parallax-img bg_img2 {% if section.settings.parallax_enable %} parallex {% endif %}" data-source-url="{{ section.settings.image | img_url: 'master' }}" style="background-color:{{section.settings.bg_color}};background-image:url('{{ section.settings.image | img_url: 'master' }}'); {% if section.settings.parallax_enable %} background-position: 50% 65.8718%; {% else %}     background-size: contain; {% endif %}">
+      <div class="container">     
+        <div class="parallax-detail col-sm-5 col-xs-12" data-aos="fade-up">          
+          {% if section.settings.subtitle != blank %}
+          <div class="subtitle">{{ section.settings.subtitle }}</div>
+          {% endif %}
+          {% if section.settings.title != blank %}
+          <div class="tt-title">{{ section.settings.title }}</div>
+          {% endif %}
+          {% if section.settings.parallax_desc != blank %}
+          <div class="description">{{ section.settings.parallax_desc }}</div>
+          {% endif %}
+          {% if section.settings.btn_link != blank %}
+          <div class="parallax-button">
+            <a class="parallaxbtn btn" href="{% if section.settings.btn_link != blank %}{{ section.settings.btn_link }}{% else %}#{% endif %}">{{ section.settings.btn_txt }}</a>
+          </div>
+          {% endif %}
+        </div>    
+      </div>
+  </div>
+</div>
+{{ 'parallax.min.js' | asset_url | script_tag }}
+{% schema %}
+{
+"name": "TTParallax Section",
+"class": "ttcmsparallax",
+"settings": [
+{
+"type": "color",
+"id": "bg_color",
+"label": "Background Color",
+"default": "#f5f5f5"
+},
+{
+"type": "checkbox",
+"id": "parallax_enable",
+"label": "Show Parallax Enable"
+}, 
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Title Color",
+"default": "#111111"
+},
+{
+"type": "text",
+"id": "subtitle",
+"label": "Sub title"
+},
+{
+"type": "color",
+"id": "subtitle_color",
+"label": "Subtitle Color",
+"default": "#111111"
+},
+{
+"type": "textarea",
+"id": "parallax_desc",
+"label": "Description"
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "Description Color",
+"default": "#111111"
+},
+{
+"type": "text",
+"id": "btn_txt",
+"label": "Button text"
+},
+{
+"type": "url",
+"id": "btn_link",
+"label": "Button Link"
+},
+{
+"type": "color",
+"id": "btn_txt_color",
+"label": "Button text Color",
+"default": "#ffffff"
+},
+{
+"type": "color",
+"id": "btn_bg_color",
+"label": "Button background Color",
+"default": "#c40529"
+},
+{
+"type": "color",
+"id": "btn_hover_txt_color",
+"label": "Button Hover text Color",
+"default": "#ffffff"
+},
+{
+"type": "color",
+"id": "btn_hover_bg_color",
+"label": "Button Hover background Color",
+"default": "#111111"
+}
+],
+"presets": [
+{
+"name": "TTParallax section",
+"category": "TT CMS section"
+}
+]
+}
+{% endschema %}
+<script>jQuery(document).ready(function(){"use strict";var isMobile=/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);if(!isMobile){if(jQuery(".parallex").length){jQuery(".parallex:not(.invert_true)").sitManParallex({invert:!1})};if(jQuery(".parallex.invert_true").length){jQuery(".parallex").sitManParallex({invert:!0})}}else{jQuery(".parallex:not(.invert_true)").sitManParallex({invert:!0});jQuery(".parallex.invert_true").sitManParallex({invert:!0})}});</script><!--End_AZEXO_sections/parallax.liquid_Section-->

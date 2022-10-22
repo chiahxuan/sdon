@@ -1,0 +1,189 @@
+<div data-section-id="{{ section.id }}"  data-section-type="product-tab-type-1" class="product-tab-type-1 tab-model-wrap{% if section.settings.type_bg != "rgba(0,0,0,0)" %} has_bg {% endif %}">    
+  {%- assign collection = collections[section.settings.collection] -%}
+  {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
+  {%- assign image_size = '270x270' -%}
+  {%- assign product_limit = 6 -%}  
+  <div class="container">   
+    <div class="grid__item" data-aos="fade-up">        
+      {% if section.settings.title_1 != blank %}
+      <div class="box-heading tthometab-title section-header">        
+        <h2 class="tt-title">{{ section.settings.title_1 }}</h2>         
+      </div>
+      {% endif %}    
+      {% if section.blocks.size > 1 %}
+      <ul id="tab_product_{{ section.id }}" class="nav nav-tabs">            
+        {%  assign block_size = 1 %} 
+        {% for block in section.blocks %} 
+        {% if block.settings.title != blank %}
+        <li class="{% if block_size == 1 %}active{% endif %}"><a href="#tabs-{{ block.id }}" data-toggle="tab" aria-expanded="false" class="tab-btn">{{ block.settings.title }} </a></li>              
+        {% endif %}
+        {% assign block_size = block_size | plus: 1 %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if section.blocks.size > 0 %} 
+      <div class="TTProduct-Tab">
+        <div class="tab-inner tab-content tab-container{% if section.settings.product_rows %} two_rows{% endif %}">   
+          <div class="row">
+            {%  assign block_size = 1 %}  
+            {% for block in section.blocks %}
+            {%- assign collection = collections[block.settings.collection] -%}   
+            {%  assign cnt = 1 %}  
+            {%-  assign foundpro = collection.products.count -%} 
+            <div id="tabs-{{ block.id }}" data-col="tabs-{{ block.id }}" class="contents tab-pane fade product_col{{ section.settings.product_col }}{% if block_size == 1 %} in active{% endif %}">
+              <div class="{{ block.settings.title | handle }}-{{ block.id }} {{ block.settings.title | handle }}-wrap owl-carousel owl-theme">
+                {% for product in collection.products limit: product_limit %}
+                {%- assign mod_2 = cnt | modulo:2 -%}
+                {% if foundpro >= 8 %}
+                {% if section.settings.product_rows %}
+                {%  if mod_2 != 0  %}
+                <ul>
+                  <li class='li_single'>
+                    {% endif %}
+                    {% endif %}
+                    {% endif %}
+                    {% render 'product-card-grid', collection: collection , grid_image_width: image_size , product : product %}
+                    {% if foundpro >= 8 %}
+                    {% if section.settings.product_rows %}
+                    {%  if mod_2 == 0  %}
+                  </li>
+                </ul>
+                {% endif %}
+                {% endif  %}      					
+                {% assign cnt = cnt | plus: 1 %}
+                {% endif %}                    
+                {% endfor %}
+                {% if foundpro >= 8 %}
+                {% if section.settings.product_rows %}
+                {%  if mod_2 != 0  %}
+                </li>
+              </ul>
+            {% endif %}
+            {% endif %}
+            {% endif %}                                                            
+          </div>
+        </div>         
+        <script type="text/javascript">jQuery(document).ready(function(){
+  if(jQuery("body")){var tab_carousel_1=$("body .{{ block.settings.title | handle }}-{{ block.id }}");jQuery(tab_carousel_1).owlCarousel({items:{{section.settings.product_col}},autoPlay:!1,stopOnHover:!1,loop:!1,responsive:{100:{items:1},319:{items:2},700:{items:3},992:{items:3},1200:{items:4},1400:{items:{{section.settings.product_col}}}},nav:!0,dots:!1})}else{var tab_carousel=$("body:not .{{ block.settings.title | handle }}-{{ block.id }}");jQuery(tab_carousel).owlCarousel({items:{{section.settings.product_col}},autoPlay:!1,stopOnHover:!1,loop:!1,responsive:{100:{items:1},319:{items:2},700:{items:3},992:{items:3},1200:{items:4},1400:{items:{{section.settings.product_col}}}},nav:!0,dots:!1})}
+  jQuery(".{{ block.settings.title | handle }}-nav .next").click(function(){jQuery(".{{ block.settings.title | handle }}-{{ block.id }}").trigger('next.owl')});jQuery(".{{ block.settings.title | handle }}-nav .prev").click(function(){jQuery(".{{ block.settings.title | handle }}-{{ block.id }}").trigger('prev.owl')})});jQuery(window).load(function(){if(jQuery(".{{ block.settings.title | handle }}-wrap").find('.owl-nav').hasClass('disabled')){jQuery(".{{ block.settings.title | handle }}-nav").hide()}else{jQuery(".{{ block.settings.title | handle }}-nav").show()}});jQuery(window).resize(function(){if(jQuery(".{{ block.settings.title | handle }}-wrap").find('.owl-nav').hasClass('disabled')){jQuery(".{{ block.settings.title | handle }}-nav").hide()}else{jQuery(".{{ block.settings.title | handle }}-nav").show()}})
+        </script>
+        {% assign block_size = block_size | plus: 1 %}
+        {% endfor %}
+      </div><!--End tabs container-->
+    </div><!--End tabs-->
+  </div>                         
+  {% endif %}
+</div>
+</div>
+</div>
+<style>
+  .ttproduct .nav.nav-tabs > li .tab_content .tab-detail .tab-title {
+    color:{{ section.settings.title_color }};
+  }
+  .ttproduct .nav.nav-tabs > li .tab_content .tab-detail .tab-item{
+    color:{{ section.settings.item_color }};
+  }
+  .ttproduct .nav.nav-tabs > li.active .tab_content .tab-detail .tab-title,
+  .ttproduct .nav.nav-tabs > li .tab_content .tab-detail .tab-title:focus {
+    color:{{ section.settings.title_hover_color }};	    
+  }
+  .ttproduct .nav-tabs > li:hover .tab_content .tab-detail .tab-title {
+    color:{{ section.settings.title_hover_color }};
+  }
+  .ttproduct .product-tab-type-1 {
+    float: left;
+    width: 100%;
+  }
+  .ttproduct .nav-tabs>li.active>a {
+    background:{{ section.settings.button_bg }};
+    color:{{ section.settings.button_text }};
+  }
+</style>
+{% schema %}
+{
+"name": "Sortable Products",
+"class": "index-section ttproduct",
+"max_blocks": 5,
+"settings": [
+{
+"type": "checkbox",
+"id": "product_rows",
+"label": "2 Rows Product"
+},
+{
+"type": "select",
+"id": "product_col",
+"label": "Select product Column",
+"options": [
+{
+"value": "3",
+"label": "3 Column"
+},
+{
+"value": "4",
+"label": "4 Column"
+},
+{
+"value": "5",
+"label": "5 Column"
+}
+],
+"default": "5"
+},
+{
+"type": "text",
+"id": "title_1",
+"default": "Trending products",
+"label": "Heading"
+},
+{
+"type": "color",
+"id": "title_color",
+"default": "#111",
+"label": "tab title color"
+},
+{
+"type": "color",
+"id": "button_bg",
+"label": "Button Bg color",
+"default": "#fff"
+},
+{
+"type": "color",
+"id": "button_text",
+"label": "Button text color",
+"default": "#000"
+}
+],
+"blocks": [	
+{
+"type": "text_block",
+"name": "Column",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Collection Name",
+"default": "Tab Name"
+},	
+{
+"id": "collection",
+"type": "collection",
+"label": "Collection"
+}	
+]
+}
+],
+"presets": [
+{
+"name": "Sortable Products",
+"category": "Collection",
+"blocks": [
+{
+"type": "text_block"
+}        
+]
+}
+]
+}
+{% endschema %}

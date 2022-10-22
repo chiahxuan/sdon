@@ -1,0 +1,466 @@
+<style>
+  .cmssubbanner .subbanner.subbanner1 .subbanner-content .title{
+    color:{{ section.settings.banner1_title_color}};
+  }
+  .cmssubbanner .subbanner.subbanner2 .subbanner-content.top-banner .title{
+    color:{{ section.settings.banner2_title_color}};
+  }
+  .cmssubbanner .subbanner.subbanner2 .subbanner-content.bottom-banner .title{
+    color:{{ section.settings.banner3_title_color}};
+  }
+  .cmssubbanner .subbanner.subbanner3 .subbanner-content .title{
+    color:{{ section.settings.banner4_title_color}};
+  }  
+  .cmssubbanner .subbanner.subbanner1 .subbanner-content .subtitle{
+    color:{{ section.settings.banner1_subtitle_color}};
+  }
+  .cmssubbanner .subbanner.subbanner2 .subbanner-content.top-banner .subtitle{
+    color:{{ section.settings.banner2_subtitle_color}};
+  }
+  .cmssubbanner .subbanner.subbanner2 .subbanner-content.bottom-banner .subtitle{
+    color:{{ section.settings.banner3_subtitle_color}};
+  }
+  .cmssubbanner .subbanner.subbanner3 .subbanner-content .subtitle{
+    color:{{ section.settings.banner4_subtitle_color}};
+  }
+  .cmssubbanner .subbanner.subbanner1 .subbanner-content .ttbanner-btn{
+    color:{{ section.settings.btn1_txt_color}};background:{{ section.settings.btn1_bg_color}};
+  }
+  .cmssubbanner .subbanner.subbanner1 .subbanner-content .ttbanner-btn:hover,
+  .cmssubbanner .subbanner.subbanner1 .subbanner-content .ttbanner-btn:focus{
+    color:{{ section.settings.btn1_txt_hover_color}};
+  }
+  .cmssubbanner .subbanner.subbanner1 .subbanner-content .ttbanner-btn::after{
+    background:{{ section.settings.btn1_bg_hover_color}};
+  }
+  .cmssubbanner .subbanner.subbanner2 .subbanner-content.top-banner .ttbanner-btn{
+    color:{{ section.settings.btn2_txt_color}};background:{{ section.settings.btn2_bg_color}};
+  }
+  .cmssubbanner .subbanner.subbanner2 .subbanner-content.top-banner .ttbanner-btn:hover,
+  .cmssubbanner .subbanner.subbanner2 .subbanner-content.top-banner .ttbanner-btn:focus{
+    color:{{ section.settings.btn2_txt_hover_color}};
+  }
+  .cmssubbanner .subbanner.subbanner2 .subbanner-content.top-banner .ttbanner-btn::after{
+    background:{{ section.settings.btn2_bg_hover_color}};
+  }
+  .cmssubbanner .subbanner.subbanner2 .subbanner-content.bottom-banner .ttbanner-btn{
+    color:{{ section.settings.btn3_txt_color}};background:{{ section.settings.btn3_bg_color}};
+  }
+  .cmssubbanner .subbanner.subbanner2 .subbanner-content.bottom-banner .ttbanner-btn:hover,
+  .cmssubbanner .subbanner.subbanner2 .subbanner-content.bottom-banner .ttbanner-btn:focus{
+    color:{{ section.settings.btn3_txt_hover_color}};
+  }
+  .cmssubbanner .subbanner.subbanner2 .subbanner-content.bottom-banner .ttbanner-btn::after{
+    background:{{ section.settings.btn3_bg_hover_color}};
+  }
+  .cmssubbanner .subbanner.subbanner3 .subbanner-content .ttbanner-btn{
+    color:{{ section.settings.btn4_txt_color}};background:{{ section.settings.btn4_bg_color}};
+  }
+  .cmssubbanner .subbanner.subbanner3 .subbanner-content .ttbanner-btn:hover,
+  .cmssubbanner .subbanner.subbanner3 .subbanner-content .ttbanner-btn:focus{
+    color:{{ section.settings.btn4_txt_hover_color}};
+  }
+  .cmssubbanner .subbanner.subbanner3 .subbanner-content .ttbanner-btn::after{
+    background:{{ section.settings.btn4_bg_hover_color}};
+  }
+</style>
+<div class="cmssubbanner col-sm-12 col-xs-12" data-aos="fade-up">
+  <div class="subbanner subbanner1 col-sm-4 col-xs-12">
+    {% if section.settings.banner1_img != blank %}
+    <a href="{% if section.settings.banner1_url != blank %}{{ section.settings.banner1_url }}{% else %}#{% endif %}">
+      <img width="600" height="650" src="{{ section.settings.banner1_img | img_url:"600x650" }}" alt="banner1">
+      <div class="subbanner-content left-banner {{ section.settings.text1_position }}">   
+        {% if section.settings.banner1_subtitle != blank %}<div class="subtitle">{{ section.settings.banner1_subtitle }}</div>{% endif %}              
+        {% if section.settings.banner1_title != blank %}<div class="title">{{ section.settings.banner1_title }}</div>{% endif %}                        
+        {% if section.settings.btn1_text != blank %}
+        <div class="ttbanner-btn btn" href="{{ section.settings.btn_link1 }}">{{ section.settings.btn1_text }}</div>
+        {% endif %}     
+      </div>
+    </a>
+    {% endif %}
+  </div>
+  <div class="subbanner subbanner2 col-sm-4 col-xs-12">
+    <div class="banner1 col-sm-12">
+      {% if section.settings.banner2_img != blank %}
+      <a href="{% if section.settings.banner2_url != blank %}{{ section.settings.banner2_url }}{% else %}#{% endif %}">
+        <img width="600" height="310" src="{{ section.settings.banner2_img | img_url:"600x310" }}" alt="banner2">
+        <div class="subbanner-content top-banner {{ section.settings.text2_position }}">
+          <div class="banner-inner">  
+            {% if section.settings.banner2_subtitle != blank %}<div class="subtitle">{{ section.settings.banner2_subtitle }}</div>{% endif %}              
+            {% if section.settings.banner2_title != blank %}<div class="title">{{ section.settings.banner2_title }}</div>{% endif %}              
+            {% if section.settings.btn2_text != blank %}
+            <div class="ttbanner-btn btn" href="{{ section.settings.btn_link2 }}">{{ section.settings.btn2_text }}</div>
+            {% endif %}
+          </div>
+        </div>
+      </a>
+      {% endif %}
+    </div>
+    <div class="banner2 col-sm-12">
+      {% if section.settings.banner3_img != blank %}
+      <a href="{% if section.settings.banner3_url != blank %}{{ section.settings.banner3_url }}{% else %}#{% endif %}">
+        <img width="600" height="310" src="{{ section.settings.banner3_img | img_url:"600x310" }}" alt="banner3">
+        <div class="subbanner-content bottom-banner {{ section.settings.text3_position }}">
+          <div class="banner-inner">  
+            {% if section.settings.banner3_subtitle != blank %}<div class="subtitle">{{ section.settings.banner3_subtitle }}</div>{% endif %}              
+            {% if section.settings.banner3_title != blank %}<div class="title">{{ section.settings.banner3_title }}</div>{% endif %}              
+            {% if section.settings.btn3_text != blank %}
+            <div class="ttbanner-btn btn" href="{{ section.settings.btn_link3 }}">{{ section.settings.btn3_text }}</div>
+            {% endif %}
+          </div>
+        </div>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="subbanner subbanner3 col-sm-4 col-xs-12">
+    {% if section.settings.banner4_img != blank %}
+    <a href="{% if section.settings.banner4_url != blank %}{{ section.settings.banner4_url }}{% else %}#{% endif %}">
+      <img width="600" height="650" src="{{ section.settings.banner4_img | img_url:"600x650" }}" alt="banner4">
+      <div class="subbanner-content right-banner {{ section.settings.text4_position }}">
+        {% if section.settings.banner4_subtitle != blank %}<div class="subtitle">{{ section.settings.banner4_subtitle }}</div>{% endif %}              
+        {% if section.settings.banner4_title != blank %}<div class="title">{{ section.settings.banner4_title }}</div>{% endif %}              
+        {% if section.settings.btn4_text != blank %}
+        <div class="ttbanner-btn btn" href="{{ section.settings.btn_link4 }}">{{ section.settings.btn4_text }}</div>
+        {% endif %}   
+      </div>
+    </a>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+{
+"name": "CmsSubBanner",
+"class": "index-section cmssubbanner",
+"settings": [
+{
+"type": "image_picker",
+"id": "banner1_img",
+"label": "Banner1 image"
+},
+{
+"type": "url",
+"id": "banner1_url",
+"label": "Banner1 url"
+},
+{
+"type": "select",
+"id": "text1_position",
+"label": "Text Position",
+"options": [
+{
+"value": "left",
+"label": "left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "center",
+"label": "Center"
+}
+]
+},
+{
+"type": "text",
+"id": "banner1_title",
+"label": "Banner1 title"
+},
+{
+"type": "color",
+"id": "banner1_title_color",
+"label": "Banner1 title color"
+},
+{
+"type": "text",
+"id": "banner1_subtitle",
+"label": "Banner1 subtitle"
+},
+{
+"type": "color",
+"id": "banner1_subtitle_color",
+"label": "Banner1 subtitle color"
+},
+{
+"type": "text",
+"id": "btn1_text",
+"label": "Button text"
+},
+{
+"type": "url",
+"id": "btn_link1",
+"label": "Button url"
+},
+{
+"type": "color",
+"id": "btn1_bg_color",
+"label": "Button1 Background Color"
+},
+{
+"type": "color",
+"id": "btn1_txt_color",
+"label": "Button1 Text color"
+},
+{
+"type": "color",
+"id": "btn1_txt_hover_color",
+"label": "Button1 text hover color"
+},
+{
+"type": "color",
+"id": "btn1_bg_hover_color",
+"label": "Button1 Hover Background Color"
+},
+{
+"type": "image_picker",
+"id": "banner2_img",
+"label": "Banner2 image"
+},
+{
+"type": "url",
+"id": "banner2_url",
+"label": "Banner2 url"
+},
+{
+"type": "select",
+"id": "text2_position",
+"label": "Text Position",
+"options": [
+{
+"value": "left",
+"label": "left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "center",
+"label": "Center"
+}
+]
+},
+{
+"type": "text",
+"id": "banner2_title",
+"label": "Banner2 title"
+},
+{
+"type": "color",
+"id": "banner2_title_color",
+"label": "Banner2 title color"
+},
+{
+"type": "text",
+"id": "banner2_subtitle",
+"label": "Banner2 subtitle"
+},
+{
+"type": "color",
+"id": "banner2_subtitle_color",
+"label": "Banner2 subtitle color"
+},
+{
+"type": "text",
+"id": "btn2_text",
+"label": "Button text"
+},
+{
+"type": "url",
+"id": "btn_link2",
+"label": "Button url"
+},
+{
+"type": "color",
+"id": "btn2_bg_color",
+"label": "Button2 Background Color"
+},
+{
+"type": "color",
+"id": "btn2_txt_color",
+"label": "Button2 Text color"
+},
+{
+"type": "color",
+"id": "btn2_txt_hover_color",
+"label": "Button2 text hover color"
+},
+{
+"type": "color",
+"id": "btn2_bg_hover_color",
+"label": "Button2 Hover Background Color"
+},
+{
+"type": "image_picker",
+"id": "banner3_img",
+"label": "Banner3 image"
+},
+{
+"type": "url",
+"id": "banner3_url",
+"label": "Banner3 url"
+},
+{
+"type": "select",
+"id": "text3_position",
+"label": "Text Position",
+"options": [
+{
+"value": "left",
+"label": "left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "center",
+"label": "Center"
+}
+]
+},
+{
+"type": "text",
+"id": "banner3_title",
+"label": "Banner3 title"
+},
+{
+"type": "color",
+"id": "banner3_title_color",
+"label": "Banner3 title color"
+},
+{
+"type": "text",
+"id": "banner3_subtitle",
+"label": "Banner3 subtitle"
+},
+{
+"type": "color",
+"id": "banner3_subtitle_color",
+"label": "Banner3 subtitle color"
+},
+{
+"type": "text",
+"id": "btn3_text",
+"label": "Button text"
+},
+{
+"type": "url",
+"id": "btn_link3",
+"label": "Button url"
+},
+{
+"type": "color",
+"id": "btn3_bg_color",
+"label": "Button3 Background Color"
+},
+{
+"type": "color",
+"id": "btn3_txt_color",
+"label": "Button3 Text color"
+},
+{
+"type": "color",
+"id": "btn3_txt_hover_color",
+"label": "Button3 text hover color"
+},
+{
+"type": "color",
+"id": "btn3_bg_hover_color",
+"label": "Button3 Hover Background Color"
+},
+{
+"type": "image_picker",
+"id": "banner4_img",
+"label": "Banner4 image"
+},
+{
+"type": "url",
+"id": "banner4_url",
+"label": "Banner4 url"
+},
+{
+"type": "select",
+"id": "text4_position",
+"label": "Text Position",
+"options": [
+{
+"value": "left",
+"label": "left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "center",
+"label": "Center"
+}
+]
+},
+{
+"type": "text",
+"id": "banner4_title",
+"label": "Banner4 title"
+},
+{
+"type": "color",
+"id": "banner4_title_color",
+"label": "Banner4 title color"
+},
+{
+"type": "text",
+"id": "banner4_subtitle",
+"label": "Banner4 subtitle"
+},
+{
+"type": "color",
+"id": "banner4_subtitle_color",
+"label": "Banner4 subtitle color"
+},
+{
+"type": "text",
+"id": "btn4_text",
+"label": "Button text"
+},
+{
+"type": "url",
+"id": "btn_link4",
+"label": "Button url"
+},
+{
+"type": "color",
+"id": "btn4_bg_color",
+"label": "Button4 Background Color"
+},
+{
+"type": "color",
+"id": "btn4_txt_color",
+"label": "Button4 Text color"
+},
+{
+"type": "color",
+"id": "btn4_txt_hover_color",
+"label": "Button4 text hover color"
+},
+{
+"type": "color",
+"id": "btn4_bg_hover_color",
+"label": "Button4 Hover Background Color"
+}
+],
+"presets": [
+{
+"name": "CmsSubBanner",
+"category": "TT CMS section"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

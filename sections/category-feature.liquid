@@ -1,0 +1,121 @@
+<style>
+  .tt-collection-content .collection-info .collection_title{
+  	color: {{section.settings.title_color }};
+  }
+  .tt-collection-content .description{
+  	color: {{section.settings.desc_color }};
+  }
+</style>
+<div data-section-id="{{ section.id }}"  data-section-type="tt-category-feature-wrap" class="tt-category-feature-wrap hb-animate-element bottom-to-top">
+    <div class="category_feature_wrap">
+      <div class="container">        
+        {% if section.settings.title != blank  %}
+        <div class="section-header section-header--small">
+          <h2 class="tt-title">{{ section.settings.title }}</h2>  
+        </div>
+        {% endif %}
+        <div class="category_cms_feature_wrap"> 
+          <div class="row">
+            {% if section.blocks.size > 0 %}
+            <div class="category_cms_feature owl-carousel owl-theme">
+              {%  assign block_size = section.blocks.size %} 
+              {%  assign cnt = 1 %}      
+              {% for block in section.blocks %}  
+              {%- assign collection = collections[block.settings.collection_cat_id] -%}
+              {%- assign mod_2 = cnt | modulo:2 -%}
+              <div id="cat-featured-{{ block.id }}" class="collection_cat_item col-xs-12">          
+                <a href="{{ collection.url }}">
+                  <div class="tt-collection-content col-sm-5 col-xs-5">  
+                    <div class="collection-info">
+                      <div class="collection_title">{{ block.settings.collection_title }}</div>
+                    </div>                  
+                      {% if block.settings.collection_desc != blank %}
+                      <div class="description">{{ block.settings.collection_desc | truncatewords : 7 }}</div>
+                      {% endif %}
+                      <p class="desc">{{ collection.all_products_count }} <span>{{ 'cart.general.items' | t }}</span></p> 
+                  </div>
+                  <div class="collection_img col-sm-7 col-xs-7">
+                    <div class="cat-cms-img">
+                      <img height="270" width="195" src="{{ block.settings.image_1 | img_url: "270x195"  }}" alt="category featured" />
+                    </div>
+                  </div>
+                </a>
+              </div>  
+              {% endfor %}           
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% schema %}
+{
+"name": "Category Feature",
+"class": "category-featured index-section",
+"max_blocks":6,
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading"
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Title Color"
+},
+{
+"type": "color",
+"id": "collection_title_color",
+"label": "collection Title Color"
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "collection description Color"
+}
+],
+"blocks": [
+{
+"type": "text_collection",
+"name": "collection cms",
+"settings": [
+{
+"type": "image_picker",
+"id": "image_1",
+"label": "Image",
+"info": "Size: 200x280"
+},
+{
+"type": "collection",
+"id": "collection_cat_id",
+"label": "Select collection"
+},
+{
+"type": "text",
+"id": "collection_title",
+"label": "Title"
+},
+{
+"type": "textarea",
+"id": "collection_desc",
+"label": "Description"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Category Feature",
+"category": "TT CMS section",
+"blocks": [
+{
+"type": "text_collection"
+}     
+
+]
+}
+]
+}
+{% endschema %}

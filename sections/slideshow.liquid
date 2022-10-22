@@ -1,0 +1,391 @@
+<style>.homeslider .slides .slick-arrow{background:{{ section.settings.slide_button_bg_color}};}
+  .homeslider .slides .slick-arrow:hover,.homeslider .slides .slick-arrow:focus{background:{{ section.settings.slide_button_hoverbg_color}};}
+  .homeslider .slides .slick-arrow{color:{{ section.settings.slide_button_txt_color}};}.homeslider .slides .slick-arrow:hover,.homeslider .slides .slick-arrow:focus{color:{{ section.settings.slide_button_txt_hover_color}};}
+  .home-slider .slider-content-wrap.content-left.effect_right .slider-title,
+  .home-slider .slider-content-wrap.content-right.effect_right .slider-title,
+  .home-slider .slider-content-wrap.content-center.effect_right .slider-title{
+    animation: 1200ms ease-in-out 0s normal none 1 running fadeOutRight;
+  }
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-left.effect_right .slider-title,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-right.effect_right .slider-title,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-center.effect_right .slider-title{
+    animation: 1200ms ease-in-out 0s normal none 1 running fadeInRight;
+  }
+  .home-slider .slider-content-wrap.content-left.effect_right .slider-subtitle,
+  .home-slider .slider-content-wrap.content-right.effect_right .slider-subtitle,
+  .home-slider .slider-content-wrap.content-center.effect_right .slider-subtitle{
+    animation: 1400ms ease-in-out 0s normal none 1 running fadeOutRight;
+  }
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-left.effect_right .slider-subtitle,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-right.effect_right .slider-subtitle,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-center.effect_right .slider-subtitle{
+    animation: 1400ms ease-in-out 0s normal none 1 running fadeInRight;
+  }
+  .home-slider .slider-content-wrap.content-left.effect_right .slider-button,
+  .home-slider .slider-content-wrap.content-right.effect_right .slider-button,
+  .home-slider .slider-content-wrap.content-center.effect_right .slider-button{
+    animation: 1600ms ease-in-out 0s normal none 1 running fadeOutRight;
+  }
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-left.effect_right .slider-button,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-right.effect_right .slider-button,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-center.effect_right .slider-button{
+    animation: 1600ms ease-in-out 0s normal none 1 running fadeInRight;
+  }
+  .home-slider .slider-content-wrap.content-right.effect_left .slider-title,
+  .home-slider .slider-content-wrap.content-left.effect_left .slider-title,
+  .home-slider .slider-content-wrap.content-center.effect_left .slider-title{
+    animation: 1500ms ease-in-out 0s normal none 1 running fadeOutLeft;
+  }
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-right.effect_left .slider-title,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-left.effect_left .slider-title,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-center.effect_left .slider-title{
+    animation: 1500ms ease-in-out 0s normal none 1 running fadeInLeft;
+  }
+  .home-slider .slider-content-wrap.content-right.effect_left .slider-subtitle,
+  .home-slider .slider-content-wrap.content-left.effect_left .slider-subtitle,
+  .home-slider .slider-content-wrap.content-center.effect_left .slider-subtitle{
+    animation: 1700ms ease-in-out 0s normal none 1 running fadeOutLeft;
+  }
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-right.effect_left .slider-subtitle,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-center.effect_left .slider-subtitle,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-left.effect_left .slider-subtitle{
+    animation: 1700ms ease-in-out 0s normal none 1 running fadeInLeft;
+  }
+  .home-slider .slider-content-wrap.content-right.effect_left .slider-button,
+  .home-slider .slider-content-wrap.content-left.effect_left .slider-button,
+  .home-slider .slider-content-wrap.content-center.effect_left .slider-button{
+    animation: 1900ms ease-in-out 0s normal none 1 running fadeOutLeft;
+  }
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-right.effect_left .slider-button,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-left.effect_left .slider-button,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-center.effect_left .slider-button{
+    animation: 1900ms ease-in-out 0s normal none 1 running fadeInLeft;
+  }
+  .home-slider .slider-content-wrap.content-center.effect_bottom .slider-title,
+  .home-slider .slider-content-wrap.content-left.effect_bottom .slider-title,
+  .home-slider .slider-content-wrap.content-right.effect_bottom .slider-title{
+    animation: 1500ms ease-in-out 0s normal none 1 running fadeOutUp;
+  }
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-center.effect_bottom .slider-title,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-left.effect_bottom .slider-title,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-right.effect_bottom .slider-title{
+    animation: 1500ms ease-in-out 0s normal none 1 running fadeInUp;
+  }
+  .home-slider .slider-content-wrap.content-center.effect_bottom .slider-subtitle,
+  .home-slider .slider-content-wrap.content-left.effect_bottom .slider-subtitle,
+  .home-slider .slider-content-wrap.content-right.effect_bottom .slider-subtitle{
+    animation: 1800ms ease-in-out 0s normal none 1 running fadeOutUp;
+  }
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-center.effect_bottom .slider-subtitle,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-left.effect_bottom .slider-subtitle,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-right.effect_bottom .slider-subtitle{
+    animation: 1800ms ease-in-out 0s normal none 1 running fadeInUp;
+  }
+  .home-slider .slider-content-wrap.content-center.effect_bottom .slider-button,
+  .home-slider .slider-content-wrap.content-left.effect_bottom .slider-button,
+  .home-slider .slider-content-wrap.content-right.effect_bottom .slider-button{
+    animation: 2000ms ease-in-out 0s normal none 1 running fadeOutUp;
+  }
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-center.effect_bottom .slider-button,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-left.effect_bottom .slider-button,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-right.effect_bottom .slider-button{
+    animation: 2000ms ease-in-out 0s normal none 1 running fadeInUp;
+  }
+  .home-slider .slider-content-wrap.content-center.effect_top .slider-title,
+  .home-slider .slider-content-wrap.content-left.effect_top .slider-title,
+  .home-slider .slider-content-wrap.content-right.effect_top .slider-title {
+    animation: 1800ms ease-in-out 0s normal none 1 running fadeOutDown;
+  }
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-center.effect_top .slider-title,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-left.effect_top .slider-title,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-right.effect_top .slider-title {
+    animation: 1800ms ease-in-out 0s normal none 1 running fadeInDown;
+  }
+  .home-slider .slider-content-wrap.content-center.effect_top .slider-subtitle,
+  .home-slider .slider-content-wrap.content-left.effect_top .slider-subtitle,
+  .home-slider .slider-content-wrap.content-right.effect_top .slider-subtitle{
+    animation: 1600ms ease-in-out 0s normal none 1 running fadeOutDown;
+  }
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-center.effect_top .slider-subtitle,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-left.effect_top .slider-subtitle,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-right.effect_top .slider-subtitle{
+    animation: 1600ms ease-in-out 0s normal none 1 running fadeInDown;
+  }
+  .home-slider .slider-content-wrap.content-center.effect_top .slider-button,
+  .home-slider .slider-content-wrap.content-left.effect_top .slider-button,
+  .home-slider .slider-content-wrap.content-right.effect_top .slider-button{
+    animation: 1900ms ease-in-out 0s normal none 1 running fadeOutDown;
+  }
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-center.effect_top .slider-button,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-left.effect_top .slider-button,
+  .home-slider .slick-current.slick-active .slider-content-wrap.content-right.effect_top .slider-button{
+    animation: 1900ms ease-in-out 0s normal none 1 running fadeInDown;
+  }
+</style>
+<div class="home-slider">
+  <div class="homeslider type_{{ section.settings.slider_animation_type }}" id="homeslider--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow-section" data-animation-type="{{ section.settings.slider_animation_type }}">
+      <ul class="slides">
+        {% for block in section.blocks %}
+        {% if block.settings.image != blank %}
+        <li id="slide--{{ block.id }}" class="slide" data-thumb="slide1-thumb.jpg">
+
+          {% if block.settings.show_video == false %}
+          <a href="{% if block.settings.image_link != blank %}{{ block.settings.image_link}}{% else %}#{% endif %}"><img height="530" width="1187" src="{{ block.settings.image | img_url: "1187x530" }}" alt="slider-image" /></a>
+          {% endif %}
+
+          {% if block.settings.show_video == true %}
+          <div id="popup_toggle">
+            <div class="videoimg">  
+              <a href="{% if block.settings.image_link != blank %}{{ block.settings.image_link}}{% else %}#{% endif %}"><img height="530" width="1187" src="{{ block.settings.image | img_url: "1188x530" }}" alt="slider-image" /></a>
+              <div class="slider-content-wrap content-{{ block.settings.text_position }} effect_{{ block.settings.text_effect }}"> 
+                {% if block.settings.title != blank %}<div class="slider-title" style="color:{{block.settings.title_color }}">{{ block.settings.title }}</div>{% endif %}
+                {% if block.settings.sub_title != blank %}<div class="slider-subtitle" style="color:{{block.settings.subtitle_color }}">{{ block.settings.sub_title }}</div>{% endif %}              
+                {% if block.settings.btn_txt != blank %}
+                <div class="slider-button">
+                  <a href="{{block.settings.btn_link }}" class="btn" style="background-color:{{block.settings.btn_bg_color}};color:{{block.settings.btn_txt_color}}">{{block.settings.btn_txt}}</a>
+                </div>
+                {% endif %}
+              </div>
+              <span class="play-icone"><i class="mdi mdi-play-circle" aria-hidden="true"></i></span>       
+            </div>
+          </div>
+          <div class="popup_overlay">
+            <div class="popup" id="popupVid">
+              {% if block.settings.video_url.id == blank %}
+              <iframe src="//www.youtube.com/embed/_9VUPq3SxOc?autoplay=1&showinfo=0&rel=0&enablejsapi=1?vq=720" width="1903" height="830" frameborder="0" allowfullscreen></iframe>
+              {% else %}
+              {% if block.settings.video_url.type == "youtube" %}
+              <iframe src="//www.youtube.com/embed/{{ block.settings.video_url.id }}?vq=720&rel=0&loop=1&autoplay=1&background=1&enablejsapi=1&muted=1&player_id=bgvid-0" width="1903" height="940" allow='autoplay' frameborder="0" allowfullscreen></iframe>
+              {% elsif block.settings.video_url.type == "vimeo" %}
+              <iframe src="//player.vimeo.com/video/{{ block.settings.video_url.id }}?byline=0&portrait=0&badge=0&loop=1&autoplay=1&enablejsapi=1&background=1&muted=1&player_id=bgvid-0" width="1903" height="600" frameborder="0" allowfullscreen></iframe>
+              {% endif %}
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+
+          {% if block.settings.show_video == false %}
+          <div class="col-sm-5 slider-content-wrap content-{{ block.settings.text_position }} effect_{{ block.settings.text_effect }}">  
+            {% if block.settings.title != blank %}<div class="slider-title" style="color:{{block.settings.title_color }}">{{ block.settings.title }}</div>{% endif %}
+            {% if block.settings.sub_title != blank %}<div class="slider-subtitle" style="color:{{block.settings.subtitle_color }}">{{ block.settings.sub_title }}</div>{% endif %}          
+            {% if block.settings.btn_txt != blank %}
+            <div class="slider-button">
+              <a href="{{block.settings.btn_link }}" class="btn">{{block.settings.btn_txt}}</a>       
+            </div>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          {% if block.settings.btn_txt != blank %}
+          <style> #slide--{{ block.id }} .slider-button > a.btn{background-color:{{block.settings.btn_bg_color}};color:{{block.settings.btn_txt_color}}}#slide--{{ block.id }} .slider-button a.btn{background:{{ block.settings.btn_bg_color }};}#slide--{{ block.id }} .slider-button a.btn:hover,#slide--{{ block.id }} .slider-button a.btn:focus,#slide--{{ block.id }} .slider-button a.btn:active{border-color:{{ block.settings.btn_border_color }};} #slide--{{ block.id }} .slider-button > a::after{background-color:{{ block.settings.btn_border_color }};}#slide--{{ block.id }} .slider-button > a:hover,#slide--{{ block.id }} .slider-button > a:focus,#slide--{{ block.id }} .slider-button > a:active{color:{{ block.settings.btn_hovertxt_color }}}</style>
+          {% endif %}
+        </li>
+        {% else %}
+        <li id="slide--{{ block.id }}" {{ block.shopify_attributes }}>
+          <span class="slide-link">
+            {% capture current %}{% cycle 1, 2 %}{% endcapture %}
+            {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+          </span>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+  </div>
+</div>
+{% stylesheet %}
+{% endstylesheet %}
+{% schema %}
+{
+"name": "Slideshow",
+"class": "index-section tt-homeslider col-sm-10",
+"settings": [
+{
+"type": "select",
+"id": "slider_animation_type",
+"label": "Transition effect",
+"options": [
+{
+"value": "slide",
+"label": "Slide"
+},
+{
+"value": "fade",
+"label": "Fade"
+}
+]
+},
+{
+"type": "color",
+"id": "slide_button_bg_color",
+"label": "Button Background Color",
+"default": "#ffffff"
+},
+{
+"type": "color",
+"id": "slide_button_hoverbg_color",
+"label": "Button Hover Background Color",
+"default": "#222"
+},
+{
+"type": "color",
+"id": "slide_button_txt_color",
+"label": "Button  Color",
+"default": "#ffffff"
+},
+{
+"type": "color",
+"id": "slide_button_txt_hover_color",
+"label": "Button Hover Color",
+"default": "#111"
+}
+],
+"blocks" : [
+{
+"type": "image",
+"name": "Slide",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+},
+{
+"type": "url",
+"id": "image_link",
+"label": "Image link"
+},
+{
+"type": "checkbox",
+"id": "show_video",
+"label": "Show video",
+"default":false
+},
+{
+"type": "video_url",
+"id": "video_url",
+"label": "YouTube link",
+"accept": ["youtube", "vimeo"]
+},
+{
+"type": "textarea",
+"id": "title",
+"label": "Title",
+"default": "Minimal Work Portfolio"
+},
+{
+"type": "textarea",
+"id": "sub_title",
+"label": "Sub Title",
+"default": "New Decoration Furniture Home, Office"
+},
+{
+"type": "text",
+"id": "btn_txt",
+"label": "button text",
+"default": "shop now"
+},
+{
+"type": "url",
+"id": "btn_link",
+"label": "button link"
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Title Color",
+"default":"#fff"
+},
+{
+"type": "color",
+"id": "subtitle_color",
+"label": "Subtitle Color",
+"default":"#fff"
+},
+{
+"type": "color",
+"id": "btn_bg_color",
+"label": "button background Color",
+"default":"#EB3039"
+},
+{
+"type": "color",
+"id": "btn_txt_color",
+"label": "Button text Color",
+"default":"#fff"
+},
+{
+"type": "color",
+"id": "btn_border_color",
+"label": "button hover background Color",
+"default":"#fff"
+},
+{
+"type": "color",
+"id": "btn_hovertxt_color",
+"label": "Button hover text Color",
+"default":"#fff"
+},
+{
+"type": "select",
+"id": "text_position",
+"label": "Text Position",
+"options": [
+{
+"value": "left",
+"label": "left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "center",
+"label": "Center"
+}
+]
+},
+{
+"type": "select",
+"id": "text_effect",
+"label": "Text Effect",
+"options": [
+{
+"value": "left",
+"label": "left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "top",
+"label": "Top"
+},
+{
+"value": "bottom",
+"label": "Bottom"
+}
+]
+}             
+]
+}
+],
+"presets": [
+{
+"name": "Slideshow",
+"category": "Image",
+"settings": {
+"slider_animation_type": "slide"
+},
+"blocks": [
+{
+"type": "image"
+},
+{
+"type": "image"
+}
+]
+}
+]
+}
+{% endschema %}

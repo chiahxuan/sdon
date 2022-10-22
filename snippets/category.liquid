@@ -1,0 +1,35 @@
+{% if section.settings.enable_category == true %}
+<div class="tt-collection-slider-wrap">
+  <div class="row">  
+    {% if section.settings.title_1 != blank %}
+    <div class="box-heading tthometab-title section-header">
+      <h2 class="title">{{ section.settings.title_1 }}</h2>         
+    </div>
+    {% endif %}    
+    {% if section.blocks.size > 0 %}  
+    <div class="category_feature1 owl-carousel">
+      {% for block in section.blocks %}  
+      {% if block.type == 'text_collection' %}
+      {%- assign collection = collections[block.settings.collection_cat_id] -%}   
+      <div id="cat-featured--{{ block.id }}" class="collection_cat_item"> 
+        <div class="category_content col-sm-12">              
+          <div class="collection_img"><a href="{{ collection.url }}"><img height="290" width="220" src="{{ block.settings.image_1 | img_url: "220x290"  }}" alt="collection-img"/></a></div>                
+          {% if collection.title != blank  %}  
+          <a href="{{ collection.url }}">
+            <div class="collection_title">{{ block.settings.collection_title }}</div></a>
+          {% endif %} 
+          <div class="collection_item" href="{{ collection.url }}">{{ collection.all_products_count }} <span>{{ 'cart.general.items' | t }}</span></div>  
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+<style>
+  .tt-collection-slider-wrap .collection_title,
+  .tt-collection-slider-wrap .section-header .title
+  {color:{{section.settings.title_color }};} 
+</style>

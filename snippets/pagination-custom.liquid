@@ -1,0 +1,36 @@
+{%- if settings.collection_infinite_scroll -%}
+{%- if paginate.next -%}
+<div class="infinite-scrolling {{ settings.collection_infinite_scroll }}">
+  <a href="{{ paginate.next.url }}" title="Load more..." class="btn next">{{ 'collections.general.show_more' | t }}</a>  
+  <a href="#" class="disabled btn" style="display:none" title="Load more...">{{ 'collections.general.no_more_product' | t }}</a>  
+</div>
+{%- endif -%}
+{%- else -%}
+{%- if paginate.parts.size > 0 -%}
+<ul class="pagination-custom text-center">
+  {%- if paginate.previous -%}
+  <li><a class="enable-arrow" href="{{ paginate.previous.url }}" title="{{ paginate.previous.title }}"><i class="mdi mdi-chevron-left"></i></a></li>
+  {% else %}
+  <li class="disabled"><i class="mdi mdi-chevron-left"></i></li>
+  {%- endif -%}
+  {%- for part in paginate.parts -%}
+  {%- if part.is_link -%}
+  <li>
+    <a href="{{ part.url }}" title="">{{ part.title }}</a>
+  </li>
+  {%- else -%}
+  {%- if part.title == paginate.current_page -%}
+  <li class="active"><span>{{ part.title }}</span></li>
+  {%- else -%}
+  <li><span>{{ part.title }}</span></li>
+  {%- endif -%}
+  {%- endif -%}
+  {% endfor %}
+  {%- if paginate.next -%}
+  <li><a class="enable-arrow" href="{{ paginate.next.url }}" title="{{ paginate.next.title }}"><i class="mdi mdi-chevron-right"></i></a></li>
+  {% else %}
+  <li class="disabled"><i class="mdi mdi-chevron-right"></i></li>
+  {%- endif -%}
+</ul>
+{%- endif -%}
+{%- endif -%}

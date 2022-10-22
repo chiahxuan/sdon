@@ -1,0 +1,100 @@
+<div class="ttcmsrightbanner hb-animate-element bottom-to-top">
+  <div class="rightbanner">
+    {% for block in section.blocks %}
+    {% if block.settings.banner_image1 != blank %}
+    <div id="right-{{ block.id }}" class="ttbanner ttrightbanner col-sm-4">
+      <div class="ttbanner-img">
+        <a href="{% if block.settings.banner_link1 != blank %}{{ block.settings.banner_link1 }}{% else %}#{% endif %}">
+          {% if block.settings.banner_image1 != blank %}
+          <img height="250" width="312" src="{{ block.settings.banner_image1 | img_url: "312x250"}}" alt="banner_image1">
+          {% else %}{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}{% endif %}        
+          <div class="ttbanner-content {{ block.settings.text_position }}">
+            <div class="ttbanner-detail">
+            <div class="ttbaaner-subtitle">{{ block.settings.banner_subtitle1 }}</div> 
+            <div class="ttbaaner-title">{{ block.settings.banner_title1 }}</div>  
+            </div>
+          </div>
+        </a>
+        <style>
+          .rightbanner #right-{{ block.id }} .ttbanner-img .ttbanner-content .ttbaaner-subtitle{color: {{ block.settings.subtitle1_color }}; }.rightbanner #right-{{ block.id }} .ttbanner-img .ttbanner-content .ttbaaner-title{color: {{ block.settings.title1_color }};}      </style>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "TT cms rightbanner",
+"class": "index-section cmsrightbanner col-sm-2","max_blocks": 4,
+"blocks" : [
+{
+"type": "image",
+"name": "Slide",
+"settings": [
+{
+
+"type": "image_picker",
+"id": "banner_image1",
+"label": "Image"
+},		
+{
+"type": "text",
+"id": "banner_title1",
+"label": "Banner Title 1",
+"default": "new camera shop"
+},
+{
+"type": "color",
+"id": "title1_color",
+"label": "Title1 color",
+"default": "#fff"
+},
+{
+"type": "text",
+"id": "banner_subtitle1",
+"label": "Banner Subtitle 1",
+"default": "get exclusive, offers"
+},
+{
+"type": "color",
+"id": "subtitle1_color",
+"label": "Subtitle1 color",
+"default": "#fff"
+},
+{
+"type": "url",
+"id": "banner_link1",
+"label": "Banner button 1 link"
+},
+{
+"type": "select",
+"id": "text_position",
+"label": "Text Position",
+"options": [
+{
+"value": "left",
+"label": "left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "center",
+"label": "Center"
+}
+]
+} 
+]
+}
+],
+"presets": [
+{
+"name": "TT cms rightbanner",
+"category": "TT CMS section"
+}
+]
+}
+{% endschema %}
