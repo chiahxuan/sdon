@@ -3,7 +3,7 @@
     "main": {
       "type": "aboutus-page-img",
       "settings": {
-        "about_subtitle_color": "#2DA85C",
+        "about_subtitle_color": "#2da85c",
         "about_subtitle": "Collection 2021",
         "about_title_color": "#222222",
         "about_title": "Best Organic Shop",
@@ -24,9 +24,9 @@
         "video_url": "https:\/\/www.youtube.com\/embed\/CxFQEdI3XvU",
         "video_btn_color": "#ffffff",
         "video_btn_hover_color": "#ffffff",
-        "video_btn_bg_color": "#2DA85C",
+        "video_btn_bg_color": "#2da85c",
         "video_btn_bg_hover_color": "#222222",
-        "about1_subtitle_color": "#2DA85C",
+        "about1_subtitle_color": "#2da85c",
         "about1_subtitle": "About Us",
         "about1_title_color": "#222222",
         "about1_title": "The Heighest Quality Of Products",
@@ -139,7 +139,7 @@
       ],
       "settings": {
         "subtitle": "Team Member",
-        "subtitle_color": "#2DA85C",
+        "subtitle_color": "#2da85c",
         "title": "Our Team",
         "title_color": "#222222",
         "ourteam_column": "5"
