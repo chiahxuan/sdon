@@ -261,7 +261,7 @@
           window.location.href = jQuery('{{ 'tag' | link_to_tag: 'tag' }}').attr('href').replace('/' + 'tag', '/' + query);
         } else {
           {% if collection.handle %}
-            window.location.href = '/collections/ {{ collection.handle }}';
+            window.location.href = '/collections/  {{ collection.handle }}';
           {% elsif collection.products.first.type == collection.title %}
             window.location.href = '{{ collection.title | url_for_type }}';
           {% elsif collection.products.first.vendor == collection.title %}
@@ -324,4 +324,4 @@
       }
     </script>
   </body>
-</html>>
+</html>>>
