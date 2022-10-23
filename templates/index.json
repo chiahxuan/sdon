@@ -56,39 +56,6 @@
         "slide_button_txt_hover_color": "#ffffff"
       }
     },
-    "163946156501d2c177": {
-      "type": "cmsright-banner",
-      "blocks": {
-        "0c7dbf59-c2c4-4651-a96e-88e457cfa925": {
-          "type": "image",
-          "settings": {
-            "banner_title1": "Banana  Chips",
-            "title1_color": "#222222",
-            "banner_subtitle1": "100% Organic",
-            "subtitle1_color": "#222222",
-            "banner_link1": "https:\/\/themes-organici.myshopify.com\/#",
-            "text_position": "left"
-          }
-        },
-        "6eb5ed5b-eea2-48c1-a837-aad228946eca": {
-          "type": "image",
-          "settings": {
-            "banner_title1": "Fresh Bakery Items",
-            "title1_color": "#222222",
-            "banner_subtitle1": "Daily Fresh",
-            "subtitle1_color": "#222222",
-            "banner_link1": "",
-            "text_position": "right"
-          }
-        }
-      },
-      "block_order": [
-        "0c7dbf59-c2c4-4651-a96e-88e457cfa925",
-        "6eb5ed5b-eea2-48c1-a837-aad228946eca"
-      ],
-      "settings": {
-      }
-    },
     "bottom-banner": {
       "type": "bottom-banner",
       "settings": {
@@ -159,6 +126,39 @@
         "title_color": "#222222",
         "collection_title_color": "#222222",
         "desc_color": "#666666"
+      }
+    },
+    "163946156501d2c177": {
+      "type": "cmsright-banner",
+      "blocks": {
+        "0c7dbf59-c2c4-4651-a96e-88e457cfa925": {
+          "type": "image",
+          "settings": {
+            "banner_title1": "Banana  Chips",
+            "title1_color": "#222222",
+            "banner_subtitle1": "100% Organic",
+            "subtitle1_color": "#222222",
+            "banner_link1": "https:\/\/themes-organici.myshopify.com\/#",
+            "text_position": "left"
+          }
+        },
+        "6eb5ed5b-eea2-48c1-a837-aad228946eca": {
+          "type": "image",
+          "settings": {
+            "banner_title1": "Fresh Bakery Items",
+            "title1_color": "#222222",
+            "banner_subtitle1": "Daily Fresh",
+            "subtitle1_color": "#222222",
+            "banner_link1": "",
+            "text_position": "right"
+          }
+        }
+      },
+      "block_order": [
+        "0c7dbf59-c2c4-4651-a96e-88e457cfa925",
+        "6eb5ed5b-eea2-48c1-a837-aad228946eca"
+      ],
+      "settings": {
       }
     },
     "product-tab-model": {
@@ -516,9 +516,9 @@
   },
   "order": [
     "slideshow",
-    "163946156501d2c177",
     "bottom-banner",
     "1639565891094b0765",
+    "163946156501d2c177",
     "product-tab-model",
     "163756421953792b50",
     "tt-testimonial",
