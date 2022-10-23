@@ -6,7 +6,6 @@
         "slideshow-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/slider-01_8560a5ff-6eff-4e65-b8bf-dde52db6b528.jpg",
             "image_link": "#",
             "show_video": false,
             "video_url": "https:\/\/www.youtube.com\/watch?v=CxFQEdI3XvU",
@@ -27,7 +26,6 @@
         "slideshow-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/slider-02_7c983e80-5567-478f-887c-7cabf00c2a2b.jpg",
             "image_link": "#",
             "show_video": false,
             "video_url": "",
@@ -64,7 +62,6 @@
         "0c7dbf59-c2c4-4651-a96e-88e457cfa925": {
           "type": "image",
           "settings": {
-            "banner_image1": "shopify:\/\/shop_images\/banner-01_50fc95ed-4491-4f1a-b0ed-702eb7b5a5a0.jpg",
             "banner_title1": "Banana  Chips",
             "title1_color": "#222222",
             "banner_subtitle1": "100% Organic",
@@ -76,7 +73,6 @@
         "6eb5ed5b-eea2-48c1-a837-aad228946eca": {
           "type": "image",
           "settings": {
-            "banner_image1": "shopify:\/\/shop_images\/banner-02_c23ffa8c-f16c-4f56-9f8b-cf2c6182ef9d.jpg",
             "banner_title1": "Fresh Bakery Items",
             "title1_color": "#222222",
             "banner_subtitle1": "Daily Fresh",
@@ -96,9 +92,8 @@
     "bottom-banner": {
       "type": "bottom-banner",
       "settings": {
-        "banner_image": "shopify:\/\/shop_images\/banner-03_9070660f-9730-4109-b11b-755033002f64.jpg",
         "banner_link": "",
-        "banner_title": "100% Secure delivery without contacting the courier",
+        "banner_title": "Banner Title",
         "title_color": "#2da85c",
         "btn_text": "Shop Now",
         "btn_link": "#",
@@ -114,7 +109,6 @@
         "163956589154b53ad1-0": {
           "type": "text_collection",
           "settings": {
-            "image_1": "shopify:\/\/shop_images\/category-01_8742db4a-081b-4a2f-a3b1-b857c9276731.png",
             "collection_cat_id": "vegetables",
             "collection_title": "Fresh Vegetables",
             "collection_desc": "Vegetables are parts of plants that are consumed by humans or other animals as food. The original meaning is still commonly used and is applied to plants collectively to refer to all edible plant matter, including the flowers, fruits, stems, leaves, roots, and seeds."
@@ -123,7 +117,6 @@
         "b0860d45-731d-4a7d-9829-c8a445e534ee": {
           "type": "text_collection",
           "settings": {
-            "image_1": "shopify:\/\/shop_images\/category-02_55b862c6-567d-42bf-855a-d593d1d848ea.png",
             "collection_cat_id": "dry-fruits",
             "collection_title": "Dry Fruits",
             "collection_desc": "The Dairy Group includes milk, yogurt, cheese, lactose-free milk and fortified soy milk and yogurt. It does not include foods made from milk that have little calcium and a high fat content, such as cream cheese, sour cream, cream, and butter."
@@ -132,7 +125,6 @@
         "98fba79a-f76c-4614-9396-7e75c5914583": {
           "type": "text_collection",
           "settings": {
-            "image_1": "shopify:\/\/shop_images\/category-03_242f4925-afa0-47da-9476-0a5c8ef2a3b2.png",
             "collection_cat_id": "bakery-item",
             "collection_title": "Bakery Products",
             "collection_desc": "Bakery and baked goods categories like bars, breads (bagels, buns, rolls, biscuits and loaf breads), cookies, desserts (cakes, cheesecakes and pies), muffins, pizza, snack cakes, sweet goods (doughnuts, Danish, sweet rolls, cinnamon rolls and coffee cake) and tortillas."
@@ -141,7 +133,6 @@
         "32279f7f-2c2d-485c-ada6-bdc2224e3e1d": {
           "type": "text_collection",
           "settings": {
-            "image_1": "shopify:\/\/shop_images\/category-04_155fb242-3286-40a5-a3d7-76816537d264.png",
             "collection_cat_id": "fresh-fruits",
             "collection_title": "Fresh Fruits",
             "collection_desc": "There are few things in life that please people more than the succulence of quality fresh fruit and vegetables. At Fresh Fruits we work to deliver the world’s freshest, choicest, and juiciest produce to discerning customers across the UAE and GCC."
@@ -150,7 +141,6 @@
         "ba908b9e-e6a4-4726-8ca9-1fae4dc0b8e4": {
           "type": "text_collection",
           "settings": {
-            "image_1": "shopify:\/\/shop_images\/category-01_8742db4a-081b-4a2f-a3b1-b857c9276731.png",
             "collection_cat_id": "organic-juice",
             "collection_title": "Organic Juice",
             "collection_desc": "In particular, organic agriculture is intended to produce high quality, nutritious food that contributes to preventive health care and well-being.\nIn view of this, it should avoid the use of fertilizers,pesticides, animal drugs and food additives that may have adverse health effects."
@@ -165,7 +155,7 @@
         "ba908b9e-e6a4-4726-8ca9-1fae4dc0b8e4"
       ],
       "settings": {
-        "title": "Top Categories",
+        "title": "Brands",
         "title_color": "#222222",
         "collection_title_color": "#222222",
         "desc_color": "#666666"
@@ -221,7 +211,6 @@
     "163756421953792b50": {
       "type": "cms-banner",
       "settings": {
-        "banner1_img": "shopify:\/\/shop_images\/banner-04_73a39515-a2fa-4856-b4db-0dd4645cab44.jpg",
         "banner1_url": "#",
         "text1_position": "left",
         "banner1_title": "Fresh Vegetable Base Soup",
@@ -234,7 +223,6 @@
         "btn1_txt_color": "#ffffff",
         "btn1_txt_hover_color": "#ffffff",
         "btn1_bg_hover_color": "#222222",
-        "banner2_img": "shopify:\/\/shop_images\/banner-05.jpg",
         "banner2_url": "#",
         "text2_position": "left",
         "banner2_title": "Natural Egg Eat Every Day",
@@ -257,7 +245,6 @@
           "settings": {
             "text_desc": "\"Dessert pudding dessert jelly beans cup\ncaramelsgingerbread.Fruitcake biscuit cheesecake. Cooki\nmuffin puddingtart bear claw sugar plum croissant.\"",
             "des_color": "#666666",
-            "image_1": "shopify:\/\/shop_images\/01.jpg",
             "author_name": "Josephine Deep",
             "author_designation": "- CEO & Founder",
             "author_color": "#222222",
@@ -269,7 +256,6 @@
           "settings": {
             "text_desc": "\"Dessert pudding dessert jelly beans cup\ncaramelsgingerbread.Fruitcake biscuit cheesecake. Cooki\nmuffin puddingtart bear claw sugar plum croissant.\"",
             "des_color": "#666666",
-            "image_1": "shopify:\/\/shop_images\/02.jpg",
             "author_name": "Linnea Duff",
             "author_designation": "- Manager",
             "author_color": "#222222",
@@ -281,7 +267,6 @@
           "settings": {
             "text_desc": "\"Dessert pudding dessert jelly beans cup\ncaramelsgingerbread.Fruitcake biscuit cheesecake. Cooki\nmuffin puddingtart bear claw sugar plum croissant.\"",
             "des_color": "#666666",
-            "image_1": "shopify:\/\/shop_images\/03.jpg",
             "author_name": "Shira Roy",
             "author_designation": "- Shop Keeper",
             "author_color": "#222222",
@@ -293,7 +278,6 @@
           "settings": {
             "text_desc": "\"Dessert pudding dessert jelly beans cup\ncaramelsgingerbread.Fruitcake biscuit cheesecake. Cooki\nmuffin puddingtart bear claw sugar plum croissant.\"",
             "des_color": "#666666",
-            "image_1": "shopify:\/\/shop_images\/04.jpg",
             "author_name": "Nina Williams",
             "author_designation": "- Store Owner",
             "author_color": "#222222",
@@ -309,8 +293,7 @@
       ],
       "settings": {
         "bg_color": "#f6f3ec",
-        "parallax_enable": true,
-        "image": "shopify:\/\/shop_images\/testimonial-parallax.jpg"
+        "parallax_enable": true
       }
     },
     "special-product": {
@@ -329,7 +312,6 @@
         "745bef52-001a-4c44-86b6-7b8877fd099f": {
           "type": "image",
           "settings": {
-            "banner_image1": "shopify:\/\/shop_images\/banner-06.jpg",
             "banner_link1": "#",
             "title": "Tasty Spices Masala",
             "title_color": "#222222",
@@ -346,7 +328,6 @@
         "f705529b-c3ca-4773-99e2-c098b1acec4d": {
           "type": "image",
           "settings": {
-            "banner_image1": "shopify:\/\/shop_images\/banner-07.jpg",
             "banner_link1": "#",
             "title": "Fresh Bakery Products",
             "title_color": "#222222",
@@ -363,7 +344,6 @@
         "b14db795-74dc-4b64-8705-30132175f0f4": {
           "type": "image",
           "settings": {
-            "banner_image1": "shopify:\/\/shop_images\/banner-08.jpg",
             "banner_link1": "#",
             "title": "Tasty Venila Icecream",
             "title_color": "#222222",
@@ -409,7 +389,6 @@
         "1614071790f5f451ac-0": {
           "type": "s_text",
           "settings": {
-            "service_icon": "shopify:\/\/shop_images\/01_201cbcd5-fe1c-483f-87b9-112568e938e6.png",
             "title": "Shop Worldwide",
             "desc": "Dropship Worldwide"
           }
@@ -417,7 +396,6 @@
         "1614071790f5f451ac-1": {
           "type": "s_text",
           "settings": {
-            "service_icon": "shopify:\/\/shop_images\/03_aa8c6adf-cf40-40f0-a773-0d0be4b75a47.png",
             "title": "Big Saving Shop",
             "desc": "Save Big Every Order"
           }
@@ -425,7 +403,6 @@
         "1614071790f5f451ac-2": {
           "type": "s_text",
           "settings": {
-            "service_icon": "shopify:\/\/shop_images\/02_0d1a7cfd-3a0e-4265-a2ba-6e9bac5f7973.png",
             "title": "24H 7D Support",
             "desc": "One-on-one Support"
           }
@@ -433,7 +410,6 @@
         "1614071790f5f451ac-3": {
           "type": "s_text",
           "settings": {
-            "service_icon": "shopify:\/\/shop_images\/04_bf19e646-e5fb-430f-a271-cec8796bc241.png",
             "title": "Money Back Return",
             "desc": "Cancel Order Anytime"
           }
@@ -477,56 +453,48 @@
         "1605783755d6d9f598-0": {
           "type": "brand_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/04_fa475c34-7d48-4bb7-af1c-79bf9775c538.png",
             "link": "#"
           }
         },
         "1605783755d6d9f598-1": {
           "type": "brand_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/01_5fc21f6d-a528-427d-881f-f1cbebea3d9f.png",
             "link": "#"
           }
         },
         "1605783755d6d9f598-2": {
           "type": "brand_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/07_5d544a92-c0fd-41db-8dc6-f57a7523b971.png",
             "link": "#"
           }
         },
         "1605783755d6d9f598-3": {
           "type": "brand_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/03_e4d6f35e-b455-4c13-aadc-dda58216370d.png",
             "link": "#"
           }
         },
         "1605783755d6d9f598-4": {
           "type": "brand_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/02_dd9c4981-6d93-46e8-b2f1-b877d10c2cdf.png",
             "link": "#"
           }
         },
         "1605783755d6d9f598-5": {
           "type": "brand_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/08_873e8be8-1365-4c25-b755-aec0f9d03236.png",
             "link": "#"
           }
         },
         "b0140af0-34a1-46f5-865c-f7836ea8890e": {
           "type": "brand_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/06_f3681d19-a954-4810-9cb6-b56320412653.png",
             "link": ""
           }
         },
         "dda6d276-d384-4291-9433-9bb695514ba4": {
           "type": "brand_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/05_24122bf2-5530-4b84-bd7f-e5bd69f75011.png",
             "link": ""
           }
         }
