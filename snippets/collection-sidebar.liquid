@@ -1,7 +1,7 @@
 <!-- /snippets/collection-sidebar.liquid -->
 <div class="sidebar__inner">
   <div class="collection_sidebar">
-    <div class="sidebar-block">
+    <div class="sidebar-block desktop">
       {% render 'sidebar-category', enable_sidecategory: section.settings.enable_sidecategory, linkedlist: section.settings.linkedlist, linkedlist_title: section.settings.linkedlist_title %}
       {% if current_tags == blank %}
       {% assign has_refined = false %} 

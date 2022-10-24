@@ -3,9 +3,10 @@
 {%- assign grid_image_width = '600x600' -%}
 {%- assign viewed_products_item = 5 -%}
 <div id="recently-viewed-products-wrap" class="collection clearfix" style="display:none">  
-  <h2 class="tt-title">{{ 'products.general.recently_products_title' | t }}</h2>
   <div class="row">
+    <h2 class="tt-title">{{ 'products.general.recently_products_title' | t }}</h2>
     <div id="recently-viewed-products" class="collection recently-collection clearfix owl-carousel owl-theme {{ settings.product_hover_btn }}">
+
     </div>
   </div>
 </div>
@@ -33,7 +34,7 @@
     </span>
     <div class="spr-badges grid-item-meta"> 
                     <span class="shopify-product-reviews-badge" data-id="${id}"></span>
-    </div>
+                    </div>
                       <div class="content_price">
                           <div class="product-price-and-shipping">
 
@@ -68,8 +69,8 @@
         $this.html($price);
       });
       jQuery("body:not(.rtl) #recently-viewed-products").owlCarousel({
-        nav : true,
-        dots : false,
+        nav : false,
+        dots : true,
         pagination: true,
         mouseDrag: true,
         rtl:false,
@@ -91,8 +92,8 @@
         }
       });
       jQuery("body.rtl #recently-viewed-products").owlCarousel({
-        nav : true,
-        dots : false,
+        nav : false,
+        dots : true,
         pagination: true,
         mouseDrag: true,
         rtl:true,

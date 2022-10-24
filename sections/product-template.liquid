@@ -233,8 +233,8 @@
                           {% assign key = 'countdown' %}
                           {% if my_fields.countdown != nil %}
                           <div class="flip-countdown simple-countdown"><div class="countdown-container flip-countdown" data-countdown="{{ product.metafields.my_fields.countdown }}"></div></div>
-                          <hr class="hr"> 
-                          {% endif %}                           
+                          {% endif %}
+                          <hr class="hr">    
                           {% if section.settings.product_layout == 'design_2' %}
                           <div class="h2 product-single__price" id="price-{{ section.id }}">
                             {% render 'product-price', product: product, use_variant: true, show_vendor: section.settings.show_vendor %}

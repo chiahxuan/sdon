@@ -1,8 +1,6 @@
 <style>
   .cms-banner .banner .banner-content1 .title {color: {{section.settings.banner1_title_color }};}
-  .cms-banner .banner .banner-content2 .title {color: {{section.settings.banner2_title_color }};}    
-  .cms-banner .banner .banner-content1 .subtitle {color: {{section.settings.banner1_subtitle_color }};}
-  .cms-banner .banner .banner-content2 .subtitle {color: {{section.settings.banner2_subtitle_color }};}    	  
+  .cms-banner .banner .banner-content2 .title {color: {{section.settings.banner2_title_color }};}    	   
   .cms-banner .banner .banner-content1 .btn {color: {{section.settings.btn1_txt_color }};background:{{ section.settings.btn1_bg_color }}; }
   .cms-banner .banner .banner-content1 .btn:hover,
   .cms-banner .banner .banner-content1 .btn:focus{color: {{section.settings.btn1_txt_hover_color }};}
@@ -18,10 +16,9 @@
       <div class="banner banner1 col-sm-6 col-xs-6" data-aos="fade-up">
         {% if section.settings.banner1_img != blank %}
         <a href="{% if section.settings.banner1_url != blank %}{{ section.settings.banner1_url }}{% else %}#{% endif %}">
-          <img width="750" height="330" src="{{ section.settings.banner1_img | img_url:"750x330" }}" alt="banner1">
+          <img width="750" height="370" src="{{ section.settings.banner1_img | img_url:"750x370" }}" alt="banner1">
           <div class="banner-content banner-content1 {{ section.settings.text1_position }}">
-            <div class="banner-inner">     
-              {% if section.settings.banner1_subtitle != blank %}<div class="subtitle">{{ section.settings.banner1_subtitle }}</div>{% endif %}              
+            <div class="banner-inner">              
               {% if section.settings.banner1_title != blank %}<div class="title">{{ section.settings.banner1_title }}</div>{% endif %}              
               {% if section.settings.btn1_text != blank %}
               <div class="ttbanner-btn btn" href="{% if section.settings.btn_link1 != blank %}{{ section.settings.btn_link1 }}{% else %}#{% endif %}">      
@@ -36,10 +33,9 @@
       <div class="banner banner2 col-sm-6 col-xs-6" data-aos="fade-up">
         {% if section.settings.banner2_img != blank %}
         <a href="{% if section.settings.banner2_url != blank %}{{ section.settings.banner2_url }}{% else %}#{% endif %}">
-          <img width="750" height="330" src="{{ section.settings.banner2_img | img_url:"750x330" }}" alt="banner2">
+          <img width="750" height="370" src="{{ section.settings.banner2_img | img_url:"750x370" }}" alt="banner2">
           <div class="banner-content banner-content2 {{ section.settings.text2_position }}">
-            <div class="banner-inner"> 
-              {% if section.settings.banner2_subtitle != blank %}<div class="subtitle">{{ section.settings.banner2_subtitle }}</div>{% endif %}              
+            <div class="banner-inner">              
               {% if section.settings.banner2_title != blank %}<div class="title">{{ section.settings.banner2_title }}</div>{% endif %}
               {% if section.settings.btn2_text != blank %}
               <div class="ttbanner-btn btn" href="{% if section.settings.btn_link2 != blank %}{{ section.settings.btn_link2 }}{% else %}#{% endif %}">      
@@ -98,16 +94,6 @@
 "type": "color",
 "id": "banner1_title_color",
 "label": "Banner1 title color"
-},
-{
-"type": "text",
-"id": "banner1_subtitle",
-"label": "Banner1 sub title"
-},
-{
-"type": "color",
-"id": "banner1_subtitle_color",
-"label": "Banner1 sub title color"
 },
 {
 "type": "text",
@@ -177,16 +163,6 @@
 "type": "color",
 "id": "banner2_title_color",
 "label": "Banner2 title color"
-},
-{
-"type": "text",
-"id": "banner2_subtitle",
-"label": "Banner2 sub title"
-},
-{
-"type": "color",
-"id": "banner2_subtitle_color",
-"label": "Banner2 sub title color"
 },
 {
 "type": "text",

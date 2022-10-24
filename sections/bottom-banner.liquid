@@ -14,12 +14,15 @@
   <div class="container">
     <div class="bottombanner-img" data-aos="fade-up">
       {% if section.settings.banner_image != blank %}
-      <a href="{% if section.settings.banner_link != blank %}{{section.settings.banner_link }}{% else %}#{% endif %}"><img height="110" width="1530" src="{{  section.settings.banner_image | img_url: "1530x110" }}" alt="bottom-banner" />
+      <a href="{% if section.settings.banner_link != blank %}{{section.settings.banner_link }}{% else %}#{% endif %}"><img height="310" width="1230" src="{{  section.settings.banner_image | img_url: "1230x310" }}" alt="bottom-banner" />
         {% else %}
         {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {% endif %}
-        <div class="bottombanner-content">
-          <div class="bottomcontent">   
+        <div class="bottombanner-content {{ section.settings.text1_position }}">
+          <div class="bottomcontent">
+            {% if section.settings.banner_subtitle != blank %}
+            <div class="bottombanner-subtitle" style="color:{{section.settings.subtitle_color }};">{{ section.settings.banner_subtitle }}</div>
+            {% endif %} 
             {% if section.settings.banner_title != blank %}
             <div class="bottombanner-title" style="color:{{section.settings.title_color }}">{{ section.settings.banner_title }}</div>
             {% endif %}          
@@ -50,6 +53,25 @@
 "label": "Banner link"
 },
 {
+"type": "select",
+"id": "text1_position",
+"label": "Text Position",
+"options": [
+{
+"value": "left",
+"label": "left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "center",
+"label": "Center"
+}
+]
+},
+{
 "type": "text",
 "id": "banner_title",
 "label": "Banner Title",
@@ -60,6 +82,17 @@
 "id": "title_color",
 "label": "Title color",
 "default": "#eb3039"
+},
+{
+"type": "text",
+"id": "banner_subtitle",
+"label": "Banner Subtitle"
+},
+{
+"type": "color",
+"id": "subtitle_color",
+"label": "Subtitle color",
+"default": "#111"
 },
 {
 "type": "text",

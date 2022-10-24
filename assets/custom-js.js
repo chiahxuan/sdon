@@ -2,9 +2,6 @@ $(document).ready(function() {
   AOS.init({
     duration: 1200
   });
-
-  jQuery('.tt-homeslider,.cmsrightbanner').wrapAll('<div class="slider-banner"><div class="container"><div class="row"></div></div></div>');
-
   /*--------------- Scroll to top js -------------------*/
   jQuery("#GotoTop").on('click',function () {
     jQuery("html, body").animate({
@@ -364,7 +361,7 @@ $(document).ready(function() {
     jQuery('body').removeClass('currency-open');
     jQuery('body').removeClass('language-open');
     jQuery( ".header_language .disclosure-list" ).slideUp( "fast" );   
-    jQuery( ".currencies.flag-dropdown-menu" ).slideUp( "fast" );   
+    jQuery( ".currencies.flag-dropdown-menu" ).slideUp( "fast" );  
   });
   jQuery(".site-header__search.search-full .close-search").on('click',function(){
     jQuery('.site-header__search.search-full .serach_icon').removeClass('active');
@@ -469,7 +466,7 @@ $(document).ready(function() {
       },
     }
   });
-   var brandsowl = $("body:not(.rtl) #brands_list_slider");
+    var brandsowl = $("body:not(.rtl) #brands_list_slider");
   var  brandsowlrtl = $("body.rtl #brands_list_slider");
   brandsowl.owlCarousel({
     items : 8 , //10 items above 1000px browser width
@@ -524,29 +521,40 @@ $(document).ready(function() {
       }
     }
   });
-
+  $(".brands_next").click(function(){
+    brandsowl.trigger('owl.next');
+  });
+  $(".brands_prev").click(function(){
+    brandsowl.trigger('owl.prev');
+  });
+  $(".brands_next").click(function(){
+    brandsowlrtl.trigger('owl.next');
+  });
+  $(".brands_prev").click(function(){
+    brandsowlrtl.trigger('owl.prev');
+  });
 
   var p_col = jQuery('.slider-specialproduct').data('col');
   if(jQuery("body").hasClass('disable_menutoggle')){
     $('body.disable_menutoggle .slider-specialproduct').owlCarousel({
       items : p_col, //10 items above 1000px browser width
-      nav : true,
-      dots : false,
+      nav : false,
+      dots : true,
       responsive: {
         100: {
           items: 1
         }, 
         319: {
+          items: 1
+        },
+        650: {
           items: 2
         },
-        700: {
-          items: 3
-        },
         992: {
-          items: 4
+          items: 2
         },
         1200: {
-          items: 5
+          items: 2
         },
         1400: {
           items: p_col
@@ -556,23 +564,23 @@ $(document).ready(function() {
   }else{
     $('body .slider-specialproduct').owlCarousel({
       items : p_col, //10 items above 1000px browser width
-      nav : true,
-      dots : false,
+      nav : false,
+      dots : true,
       responsive: {
         100: {
           items: 1
         }, 
         319: {
+          items: 1
+        },
+        650: {
           items: 2
         },
-        700: {
-          items: 3
-        },
         992: {
-          items: 4
+          items: 2
         },
         1200: {
-          items: 5
+          items: 2
         },
         1400: {
           items: p_col
@@ -580,26 +588,10 @@ $(document).ready(function() {
       },
     });
   }
-  $('.slider-specialproduct .product-wrapper').each(function(){
-    var $desc = $(this).find('.product-description .progress');
-    var $qty = $(this).find('.quantity');
-    var $pbar = $(this).find('.progress-bar');
-    var $progress = $desc;
-    var $progressBar = $pbar;
-    var $quantity = $qty.html();
-    console.log($quantity);
-    var currentWidth = parseInt($progressBar.css('width'));
-    var allowedWidth = parseInt($progress.css('width'));
-    var addedWidth = currentWidth + parseInt($quantity);
-    if (addedWidth > allowedWidth) {
-      addedWidth = allowedWidth;
-    }
-    var progress = (addedWidth / allowedWidth) * 100;
-    $progressBar.animate({width: progress + '%' }, 100);
-  });  
   /*-------------------------gallery------------------*/
-  var banner = $(".product-thumb .slider-nav");
-  banner.owlCarousel({
+  var bannerowl = $("body:not(.rtl) .product-thumb .slider-nav");
+  var bannerowlrtl = $("body.rtl .product-thumb .slider-nav");
+  bannerowl.owlCarousel({
     items : 1 , //10 items above 1000px browser width
     dots: false,
     loop: true,
@@ -607,6 +599,7 @@ $(document).ready(function() {
     rewind:true,
     autoplay:true,
     autoplayHoverPause: true,
+    rtl: false,
     responsive: {
       100: {
         items: 1
@@ -624,30 +617,34 @@ $(document).ready(function() {
         items: 1
       }
     }
-  });     
-
-  $('body #ttcmsservices .block_content').owlCarousel({
-    items :4, //1 items above 1000px browser width
-    nav : false,
-    dots : false,
+  });   
+  bannerowlrtl.owlCarousel({
+    items : 1 , //10 items above 1000px browser width
+    dots: false,
     loop: false,
+    nav: true,    
+    rewind:true,
     autoplay:false,
-    rewindNav:true,
+    autoplayHoverPause: true,
+    rtl: true,
     responsive: {
-      1200: {
-        items: 4
-      },
-      700: {
-        items: 3
+      100: {
+        items: 1
       },
       481: {
-        items: 2
+        items: 1
       },
-      100: {
+      992: {
+        items: 1
+      },
+      1200: {
+        items: 1
+      },
+      1300: {
         items: 1
       }
     }
-  });
+  });  
 
   $('body .cmsblockbanner .ttbanner-wrap ').owlCarousel({
     items :5, //1 items above 1000px browser width
@@ -784,7 +781,67 @@ $(document).ready(function() {
       }
     }
   });
+  $('body:not(.rtl) .category_feature').owlCarousel({             
+    items: 4,
+    nav : false,
+    dots : true,
+    autoplay:false,
+    loop:true,
+    rewind:true,
+    rtl:false,
+    autoplayHoverPause: false,
+    responsive: {
+      100: {
+        items: 1
+      },
+      481: {
+        items: 2
+      },
+      544: {
+        items: 3
+      },
+      992: {
+        items: 4
+      },
+      1200: {
+        items: 4
+      }
+    }
+  });
+  $('body.rtl .category_feature').owlCarousel({
+    items: 4,
+    nav : false,
+    dots : true,
+    autoplay:false,
+    loop:true,
+    rewind:true,
+    rtl:true,
+    autoplayHoverPause: false,
+    responsive: {
+      100: {
+        items: 1
+      },
+      481: {
+        items: 2
+      },
+      544: {
+        items: 3
+      },
+      992: {
+        items: 4
+      },
+      1200: {
+        items: 4
+      }
+    }
+  });
+  $(".category-feature .owl-item").hover(function(){
+    $(".category-feature .owl-item.center").addClass("changeStyle");
+  });
 
+  $( ".category-feature .owl-item" ).mouseleave(function() {
+    $( ".category-feature .owl-item.center" ).removeClass("changeStyle");
+  });
   $('body:not(.rtl) .category_feature1').owlCarousel({             
     items: 6,
     nav : false,
@@ -804,10 +861,10 @@ $(document).ready(function() {
         items: 2
       },
       481: {
-        items: 3
+        items: 4
       },
       768: {
-        items: 4
+        items: 5
       },
       1300: {
         items: 6
@@ -833,84 +890,13 @@ $(document).ready(function() {
         items: 2
       },
       481: {
-        items: 3
+        items: 4
       },
       768: {
-        items: 4
+        items: 5
       },
       1300: {
         items: 6
-      }
-    }
-  });
-  $('body.rtl .category_cms_feature').owlCarousel({             
-    items: 4,
-    nav : true,
-    dots : false,
-    autoplay:false,
-    loop:false,
-    rtl:false,
-    autoplayHoverPause: false,
-    lazyLoad: true,
-    smartSpeed: 1000,
-    autoplayTimeout: 3000,
-    responsive: {
-      100: {
-        items: 1
-      },
-      320: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      768: {
-        items: 2
-      },
-      992: {
-        items: 2
-      },
-      1200: {
-        items: 3
-      },
-      1500: {
-        items: 4
-      }
-    }
-  });
-
-  $('body:not(rtl) .category_cms_feature').owlCarousel({             
-    items: 4,
-    nav : true,
-    dots : false,
-    autoplay:false,
-    loop:false,
-    rtl:false,
-    autoplayHoverPause: false,
-    lazyLoad: true,
-    smartSpeed: 1000,
-    autoplayTimeout: 3000,
-    responsive: {
-      100: {
-        items: 1
-      },
-      320: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      768: {
-        items: 2
-      },
-      992: {
-        items: 2
-      },
-      1200: {
-        items: 3
-      },
-      1500: {
-        items: 4
       }
     }
   });
@@ -1000,7 +986,6 @@ $(document).ready(function() {
     }
     prevScrollpos = currentScrollPos;
   }
-
 });
 /*------------------------ END ------------------------*/
 jQuery(window).scroll(function () {

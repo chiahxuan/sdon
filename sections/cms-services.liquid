@@ -1,39 +1,56 @@
 <style>
-  #ttcmsservices .block_content{
+  #ttcmsservices{
     background: {{ section.settings.bg_color }};
   }
   #ttcmsservices .ttcontent .service-title{color: {{ section.settings.title_color }};}
-  #ttcmsservices .ttcontent:hover .content .service-title {color: {{ section.settings.title_hover_color }};}
-  #ttcmsservices .block_content .ttcontent:hover .service .ttshipping_img.service-icon{
-    background: {{ section.settings.icon_hover_color }};
-  }
+  #ttcmsservices .ttservices-right.ttcontent .ttcontent-right:hover .content .service-title,
+  #ttcmsservices .ttservices-left.ttcontent .ttcontent-left:hover .content .service-title
+  {color: {{ section.settings.title_hover_color }};}
   #ttcmsservices .ttcontent .service-desc{color: {{ section.settings.desc_color }};}  
-  #ttcmsservices .block_content .ttcontent .service .service-icon{
-    color: {{ section.settings.icon_color }};
-    background: {{ section.settings.icon_color }};}  
+
 </style>
-{% if section.blocks.size > 0 %} 
-<div id="ttcmsservices" class="ttservice" data-aos="fade-up">  
-  <div class="container">    
-    <div class="block_content owl-carousel" style="display: block;">
-      {% for block in section.blocks %}      
-      <div class="ttcontent">
-        <div class="service">
-          <div id="icon-{{ block.id }}" class="ttshipping_img service-icon">
-          </div>
+{% if section.blocks.size > 0 %}  
+<div id="ttcmsservices" class="ttservice bg_img1" data-aos="fade-up">  
+  <div class="container">  
+    <div class="service_main bg_img2">
+      <div class="ttservices-left ttcontent col-sm-4 col-xs-6">
+        {% for block in section.blocks %}   
+        {% if block.type == 's_text' %}
+        <div class="ttcontent-left">
           <div class="content">
             <div class="service-title">{{  block.settings.title }}</div>
             <div class="service-desc">{{  block.settings.desc }}</div>
+          </div>  
+          <div class="service">  
+            <img width="75" height="75" src="{{ block.settings.service_icon | img_url:"75x75" }}" alt="img">       
           </div>
-          <style> 
-            #ttcmsservices .block_content .ttcontent .service #icon-{{ block.id }}.service-icon 
-            { mask-image:url({{ block.settings.service_icon | img_url: '50x50'}});
-              -webkit-mask-image:url({{ block.settings.service_icon | img_url: '50x50'}});}               
-          </style>
         </div>
+        {% endif %}
+        {% endfor %}
       </div>   
-      {% endfor %}
-    </div>      
+      <div class="ttservices-right ttcontent col-sm-4 col-xs-6">
+        {% for block in section.blocks %}  
+        {% if block.type == 's_text1' %}
+        <div class="ttcontent-right">
+          <div class="service">
+            <img width="75" height="75" src="{{ block.settings.service_icon1 | img_url:"75x75" }}" alt="img">
+          </div>
+          <div class="content">
+            <div class="service-title">{{  block.settings.title1 }}</div>
+            <div class="service-desc">{{  block.settings.desc1 }}</div>
+          </div>   
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <div class="ttservices-middle col-sm-4">
+        <div class="ttservices-img">
+          <a  href="{% if section.settings.img_url != blank %}{{ section.settings.img_url }}{% else %}#{% endif %}">
+            <img width="480" height="400" src="{{ section.settings.service_img | img_url:"480x400" }}" alt="img">
+          </a>
+        </div>
+      </div>
+    </div>
   </div>  
 </div>
 {% endif %}
@@ -41,6 +58,7 @@
 {
 "name": "CMS Services",
 "class":"index-section ttservices",
+"max_blocks": 6,
 "settings": [
 {
 "type": "header",
@@ -51,6 +69,16 @@
 "id": "bg_color",
 "label": "background Color",
 "default":"#000"
+},
+{
+"type": "image_picker",
+"id": "service_img",
+"label": "service image"
+},
+{
+"type": "url",
+"id": "img",
+"label": "service image"
 },
 {
 "type": "color",
@@ -69,30 +97,18 @@
 "id": "desc_color",
 "label": "Description Color",
 "default":"#000"
-},
-{
-"type": "color",
-"id": "icon_color",
-"label": "Service Icon Color",
-"default":"#000"
-},
-{
-"type": "color",
-"id": "icon_hover_color",
-"label": "Service Icon Hover Color",
-"default":"#000"
 }
 ],
 "blocks": [
 {
 "type": "s_text",
-"name": "services",
+"name": "left services",
 "settings": [
 {
 "type": "image_picker",
 "id": "service_icon",
 "label": "Service Icon",
-"info": "Size: 65x65"
+"info": "Size: 75x75"
 },
 {
 "type": "text",
@@ -103,6 +119,28 @@
 "type": "text",
 "id": "desc",
 "label": "Description"
+}
+]
+},
+{
+"type": "s_text1",
+"name": "right services",
+"settings": [
+{
+"type": "image_picker",
+"id": "service_icon1",
+"label": "Service Icon1",
+"info": "Size: 75x75"
+},
+{
+"type": "text",
+"id": "title1",
+"label": "Title1"
+},
+{
+"type": "text",
+"id": "desc1",
+"label": "Description1"
 }
 ]
 }

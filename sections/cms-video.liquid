@@ -24,7 +24,7 @@
   });
 </script>
 <div class="videoparallax" data-section-id="{{ section.id }}" >
-  <div class="pattern video-img{% if section.settings.parallax_enable %} parallex {% endif %}" data-source-url="{{ section.settings.image | img_url: 'master' }}" style="background-color:{{section.settings.bg_color}};background-image:url('{{ section.settings.image | img_url: 'master' }}'); {% if section.settings.parallax_enable %} background-position: 50% 65.8718%; {% else %} background-size: contain; {% endif %}">
+  <div class="video-img{% if section.settings.parallax_enable %} parallex {% endif %}" data-source-url="{{ section.settings.image | img_url: 'master' }}" style="background-color:{{section.settings.bg_color}};background-image:url('{{ section.settings.image | img_url: 'master' }}'); {% if section.settings.parallax_enable %} background-position: 50% 65.8718%; {% else %} background-size: contain; {% endif %}">
     <div class="container">     
       <div class="video-detail col-sm-5 col-xs-12" data-aos="fade-up">          
         {% if section.settings.subtitle != blank %}

@@ -6,7 +6,8 @@
   <div class="container">   
     <div class="grid__item" data-aos="fade-up">        
       {% if section.settings.title_1 != blank %}
-      <div class="box-heading tthometab-title section-header">        
+      <div class="box-heading tthometab-title section-header">
+        <div class="subtitle">{{ section.settings.subtitle }}</div>
         <h2 class="tt-title">{{ section.settings.title_1 }}</h2>         
       </div>
       {% endif %}    
@@ -14,9 +15,34 @@
       <ul id="tab_product_{{ section.id }}" class="nav nav-tabs">            
         {%  assign block_size = 1 %} 
         {% for block in section.blocks %} 
+        {%- assign collection = collections[block.settings.collection] -%}
         {% if block.settings.title != blank %}
-        <li class="{% if block_size == 1 %}active{% endif %}"><a href="#tabs-{{ block.id }}" data-toggle="tab" aria-expanded="false" class="tab-btn">{{ block.settings.title }} </a></li>              
-        {% endif %}
+        <li class="{% if block_size == 1 %}active{% endif %}">
+          <a href="#tabs-{{ block.id }}" data-toggle="tab" aria-expanded="false" class="tab-btn">
+            <div class="tab_content">
+              <div class="tabicon" id="iconbg-{{ block.id }}">
+                <div id="icon-{{ block.id }}" class="tab_img tab-icon">
+                </div>
+              </div>
+              <div class="tab-detail">
+                <div class="tab-title">{{ block.settings.title }}</div>              
+                <div class="tab-item" href="{{ collection.url }}">{{ collection.all_products_count }} <span>{{ 'cart.general.items' | t }}</span></div>          
+              </div>
+            </div>
+          </a>  
+          <style> 
+            .ttproduct .nav.nav-tabs > li .tabicon #icon-{{ block.id }}.tab-icon 
+            { mask-image:url({{ block.settings.tab_icon | img_url: '40x40'}});
+              -webkit-mask-image:url({{ block.settings.tab_icon | img_url: '40x40'}});} 
+            .ttproduct .nav.nav-tabs > li .tabicon#iconbg-{{ block.id }}{
+              mask-image:url({{ block.settings.tab_iconbg | img_url: '75x85'}});
+              -webkit-mask-image:url({{ block.settings.tab_iconbg | img_url: '75x85'}});
+              background: {{ block.settings.icon_bgcolor}};
+              color: {{ block.settings.icon_bgcolor}};
+            }     
+          </style>
+        </li>              
+        {% endif %}        
         {% assign block_size = block_size | plus: 1 %}
         {% endfor %}
       </ul>
@@ -31,7 +57,7 @@
             {%  assign cnt = 1 %}  
             {%-  assign foundpro = collection.products.count -%} 
             <div id="tabs-{{ block.id }}" data-col="tabs-{{ block.id }}" class="contents tab-pane fade product_col{{ section.settings.product_col }}{% if block_size == 1 %} in active{% endif %}">
-              <div class="{{ block.settings.title | handle }}-{{ block.id }} {{ block.settings.title | handle }}-wrap owl-carousel owl-theme">
+              <div class="grid-item {{ block.settings.title | handle }}-{{ block.id }} {{ block.settings.title | handle }}-wrap owl-carousel owl-theme">
                 {% for product in collection.products limit: product_limit %}
                 {%- assign mod_2 = cnt | modulo:2 -%}
                 {% if foundpro >= 8 %}
@@ -63,8 +89,8 @@
             {% endif %}                                                            
           </div>
         </div>         
-        <script type="text/javascript">jQuery(document).ready(function(){
-  if(jQuery("body")){var tab_carousel_1=$("body .{{ block.settings.title | handle }}-{{ block.id }}");jQuery(tab_carousel_1).owlCarousel({items:{{section.settings.product_col}},autoPlay:!1,stopOnHover:!1,loop:!1,responsive:{100:{items:1},319:{items:2},700:{items:3},992:{items:3},1200:{items:4},1400:{items:{{section.settings.product_col}}}},nav:!0,dots:!1})}else{var tab_carousel=$("body:not .{{ block.settings.title | handle }}-{{ block.id }}");jQuery(tab_carousel).owlCarousel({items:{{section.settings.product_col}},autoPlay:!1,stopOnHover:!1,loop:!1,responsive:{100:{items:1},319:{items:2},700:{items:3},992:{items:3},1200:{items:4},1400:{items:{{section.settings.product_col}}}},nav:!0,dots:!1})}
+        <script>jQuery(document).ready(function(){
+  if(jQuery("body")){var tab_carousel_1=$("body .{{ block.settings.title | handle }}-{{ block.id }}");jQuery(tab_carousel_1).owlCarousel({items:{{section.settings.product_col}},autoPlay:!1,stopOnHover:!1,loop:!1,responsive:{100:{items:1},319:{items:2},700:{items:3},992:{items:3},1200:{items:4},1400:{items:{{section.settings.product_col}}}},nav:!1,dots:!0})}else{var tab_carousel=$("body:not .{{ block.settings.title | handle }}-{{ block.id }}");jQuery(tab_carousel).owlCarousel({items:{{section.settings.product_col}},autoPlay:!1,stopOnHover:!1,loop:!1,responsive:{100:{items:1},319:{items:2},700:{items:3},992:{items:3},1200:{items:4},1400:{items:{{section.settings.product_col}}}},nav:!1,dots:!0})}
   jQuery(".{{ block.settings.title | handle }}-nav .next").click(function(){jQuery(".{{ block.settings.title | handle }}-{{ block.id }}").trigger('next.owl')});jQuery(".{{ block.settings.title | handle }}-nav .prev").click(function(){jQuery(".{{ block.settings.title | handle }}-{{ block.id }}").trigger('prev.owl')})});jQuery(window).load(function(){if(jQuery(".{{ block.settings.title | handle }}-wrap").find('.owl-nav').hasClass('disabled')){jQuery(".{{ block.settings.title | handle }}-nav").hide()}else{jQuery(".{{ block.settings.title | handle }}-nav").show()}});jQuery(window).resize(function(){if(jQuery(".{{ block.settings.title | handle }}-wrap").find('.owl-nav').hasClass('disabled')){jQuery(".{{ block.settings.title | handle }}-nav").hide()}else{jQuery(".{{ block.settings.title | handle }}-nav").show()}})
         </script>
         {% assign block_size = block_size | plus: 1 %}
@@ -94,9 +120,12 @@
     float: left;
     width: 100%;
   }
-  .ttproduct .nav-tabs>li.active>a {
-    background:{{ section.settings.button_bg }};
-    color:{{ section.settings.button_text }};
+  .ttproduct .section-header .subtitle{
+    color:{{ section.settings.subtitle_color }};
+  }
+  .ttproduct .nav.nav-tabs > li .tabicon .tab-icon{
+    background:{{ section.settings.icon_color }};
+    color:{{ section.settings.icon_color }};
   }
 </style>
 {% schema %}
@@ -132,6 +161,17 @@
 },
 {
 "type": "text",
+"id": "subtitle",
+"label": "Section Sub Title"
+},
+{
+"type": "color",
+"id": "subtitle_color",
+"label": "Sub Title Color",
+"default":"#fff"
+},
+{
+"type": "text",
 "id": "title_1",
 "default": "Trending products",
 "label": "Heading"
@@ -144,15 +184,21 @@
 },
 {
 "type": "color",
-"id": "button_bg",
-"label": "Button Bg color",
-"default": "#fff"
+"id": "title_hover_color",
+"default": "#111",
+"label": "tab title hover color"
 },
 {
 "type": "color",
-"id": "button_text",
-"label": "Button text color",
-"default": "#000"
+"id": "item_color",
+"default": "#111",
+"label": "tab item color"
+},
+{
+"type": "color",
+"id": "icon_color",
+"label": "tab Icon Color",
+"default":"#111"
 }
 ],
 "blocks": [	
@@ -166,6 +212,23 @@
 "label": "Collection Name",
 "default": "Tab Name"
 },	
+{
+"type": "image_picker",
+"id": "tab_icon",
+"label": "tab Icon",
+"info": "Size: 40x40"
+},
+{
+"type": "image_picker",
+"id": "tab_iconbg",
+"label": "tab Icon background",
+"info": "Size: 75x85"
+},
+{
+"type": "color",
+"id": "icon_bgcolor",
+"label": "tab Icon background color"
+},
 {
 "id": "collection",
 "type": "collection",
