@@ -131,6 +131,10 @@
         {% endif %}
         {% endif %}
       </div>
+           <div class="sidebar-block mobile">
+        {% render 'sidebar-category', enable_sidecategory: section.settings.enable_sidecategory, linkedlist: section.settings.linkedlist, linkedlist_title: section.settings.linkedlist_title %}
+        {% render 'facets', results: collection, collapse_on_larger_devices: section.settings.collapse_on_larger_devices, show_filter: section.settings.show_filter %}
+      </div>
     </header>  
     <div class="grid-uniform product-grid col-main">
       <div class="row">

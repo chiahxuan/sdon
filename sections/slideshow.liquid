@@ -130,13 +130,13 @@
         <li id="slide--{{ block.id }}" class="slide" data-thumb="slide1-thumb.jpg">
 
           {% if block.settings.show_video == false %}
-          <a href="{% if block.settings.image_link != blank %}{{ block.settings.image_link}}{% else %}#{% endif %}"><img height="530" width="1187" src="{{ block.settings.image | img_url: "1187x530" }}" alt="slider-image" /></a>
+          <a href="{% if block.settings.image_link != blank %}{{ block.settings.image_link}}{% else %}#{% endif %}"><img height="830" width="1903" src="{{ block.settings.image | img_url: "1903x800" }}" alt="slider-image" /></a>
           {% endif %}
 
           {% if block.settings.show_video == true %}
           <div id="popup_toggle">
             <div class="videoimg">  
-              <a href="{% if block.settings.image_link != blank %}{{ block.settings.image_link}}{% else %}#{% endif %}"><img height="530" width="1187" src="{{ block.settings.image | img_url: "1188x530" }}" alt="slider-image" /></a>
+              <a href="{% if block.settings.image_link != blank %}{{ block.settings.image_link}}{% else %}#{% endif %}"><img height="830" width="1903" src="{{ block.settings.image | img_url: "1903x800" }}" alt="slider-image" /></a>
               <div class="slider-content-wrap content-{{ block.settings.text_position }} effect_{{ block.settings.text_effect }}"> 
                 {% if block.settings.title != blank %}<div class="slider-title" style="color:{{block.settings.title_color }}">{{ block.settings.title }}</div>{% endif %}
                 {% if block.settings.sub_title != blank %}<div class="slider-subtitle" style="color:{{block.settings.subtitle_color }}">{{ block.settings.sub_title }}</div>{% endif %}              
@@ -197,7 +197,7 @@
 {% schema %}
 {
 "name": "Slideshow",
-"class": "index-section tt-homeslider col-sm-10",
+"class": "index-section tt-homeslider",
 "settings": [
 {
 "type": "select",

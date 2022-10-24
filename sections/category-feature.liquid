@@ -1,80 +1,93 @@
-<style>
-  .tt-collection-content .collection-info .collection_title{
-  	color: {{section.settings.title_color }};
+<style>   
+  #tt-collection-slider-wrap .ttcat-content .collection_title 
+  { color:{{ section.settings.collection_title_color }};} 
+  #tt-collection-slider-wrap .section-header .subtitle{
+  	 color:{{ section.settings.subtitle_color }};
   }
-  .tt-collection-content .description{
-  	color: {{section.settings.desc_color }};
-  }
+  #tt-collection-slider-wrap .ttcat-content .collection-detail{
+    color:{{ section.settings.collection_desc_color }};
+  }  
+  #tt-collection-slider-wrap .ttcat-content .collection_title:hover
+  { color:{{ section.settings.collection_title_hover_color }};}  
 </style>
-<div data-section-id="{{ section.id }}"  data-section-type="tt-category-feature-wrap" class="tt-category-feature-wrap hb-animate-element bottom-to-top">
-    <div class="category_feature_wrap">
-      <div class="container">        
-        {% if section.settings.title != blank  %}
-        <div class="section-header section-header--small">
-          <h2 class="tt-title">{{ section.settings.title }}</h2>  
+<div data-section-id="{{ section.id }}"  data-section-type="tt-collection-slider-wrap" id="tt-collection-slider-wrap" >
+  <div class="container">
+    <div class="row">
+      <div class="tt-collection-slider-wrap-inner" data-aos="fade-up">
+        <div class="section-header">
+          <div class="subtitle">{{ section.settings.subtitle }}</div>
+          <div class="tt-title">{{ section.settings.title }}</div>     
         </div>
-        {% endif %}
-        <div class="category_cms_feature_wrap"> 
-          <div class="row">
-            {% if section.blocks.size > 0 %}
-            <div class="category_cms_feature owl-carousel owl-theme">
-              {%  assign block_size = section.blocks.size %} 
-              {%  assign cnt = 1 %}      
-              {% for block in section.blocks %}  
-              {%- assign collection = collections[block.settings.collection_cat_id] -%}
-              {%- assign mod_2 = cnt | modulo:2 -%}
-              <div id="cat-featured-{{ block.id }}" class="collection_cat_item col-xs-12">          
-                <a href="{{ collection.url }}">
-                  <div class="tt-collection-content col-sm-5 col-xs-5">  
-                    <div class="collection-info">
-                      <div class="collection_title">{{ block.settings.collection_title }}</div>
-                    </div>                  
-                      {% if block.settings.collection_desc != blank %}
-                      <div class="description">{{ block.settings.collection_desc | truncatewords : 7 }}</div>
-                      {% endif %}
-                      <p class="desc">{{ collection.all_products_count }} <span>{{ 'cart.general.items' | t }}</span></p> 
-                  </div>
-                  <div class="collection_img col-sm-7 col-xs-7">
-                    <div class="cat-cms-img">
-                      <img height="270" width="195" src="{{ block.settings.image_1 | img_url: "270x195"  }}" alt="category featured" />
-                    </div>
-                  </div>
-                </a>
-              </div>  
-              {% endfor %}           
-            </div>
-            {% endif %}
+        <div class="category_feature owl-carousel">      
+          {% if section.blocks.size > 0 %}          
+          {% for block in section.blocks %}  
+          {%- assign collection = collections[block.settings.collection_cat_id] -%}   
+          <div id="cat-featured--{{ block.id }}" class="cat_content col-sm-12">                            
+            <div class="collection_img"><a href="{{ collection.url }}"><img src="{{ block.settings.image_1 | img_url: "285x285"  }}" alt="collection-img" height="285" width="285"/></a></div>                
+            <div class="ttcat-content">
+              {% if collection.title != blank  %}  
+              <a href="{{ collection.url }}">
+                <div class="collection_title">{{ block.settings.collection_title }}</div></a>
+              {% endif %} 
+              {% if collection.description != blank  %}
+              <div class="collection-detail">
+                {{ collection.description | strip_html | truncatewords: 10 }}
+              </div>
+              {% endif %}                
+            </div>                                
           </div>
+          {% endfor %}        
+          {% endif %}
         </div>
       </div>
     </div>
+  </div>
 </div>
+
 {% schema %}
 {
 "name": "Category Feature",
-"class": "category-featured index-section",
+"class": "index-section category-feature",
 "max_blocks":6,
 "settings": [
 {
+"type": "header",
+"content": "CMS category setting"
+},
+{
 "type": "text",
 "id": "title",
-"label": "Heading"
+"label": "Section Title"
+},
+{
+"type": "text",
+"id": "subtitle",
+"label": "Section Sub Title"
 },
 {
 "type": "color",
-"id": "title_color",
-"label": "Title Color"
+"id": "subtitle_color",
+"label": "Sub Title Color",
+"default":"#fff"
 },
 {
 "type": "color",
 "id": "collection_title_color",
-"label": "collection Title Color"
+"label": "Collection Title Color",
+"default":"#fff"
 },
 {
 "type": "color",
-"id": "desc_color",
-"label": "collection description Color"
-}
+"id": "collection_title_hover_color",
+"label": "Collection Title Hover Color",
+"default":"#fff"
+},
+{
+"type": "color",
+"id": "collection_desc_color",
+"label": "Collection Description Color",
+"default":"#fff"
+}   
 ],
 "blocks": [
 {
@@ -85,22 +98,17 @@
 "type": "image_picker",
 "id": "image_1",
 "label": "Image",
-"info": "Size: 200x280"
+"info": "Size: 285x285"
+},
+{
+"type": "text",
+"id": "collection_title",
+"label": "collection Title"
 },
 {
 "type": "collection",
 "id": "collection_cat_id",
 "label": "Select collection"
-},
-{
-"type": "text",
-"id": "collection_title",
-"label": "Title"
-},
-{
-"type": "textarea",
-"id": "collection_desc",
-"label": "Description"
 }
 ]
 }
@@ -113,9 +121,9 @@
 {
 "type": "text_collection"
 }     
-
 ]
 }
 ]
 }
 {% endschema %}
+

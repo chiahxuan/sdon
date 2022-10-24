@@ -1,1 +1,433 @@
-{"sections":{"slideshow":{"type":"slideshow","blocks":{"slideshow-0":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/slider-01_8560a5ff-6eff-4e65-b8bf-dde52db6b528.jpg","image_link":"#","show_video":false,"video_url":"https:\/\/www.youtube.com\/watch?v=CxFQEdI3XvU","title":"Organics & \nHealthy Fruit","sub_title":"Discover 100% Organic & Fresh","btn_txt":"Shop Now","btn_link":"#","title_color":"#222222","subtitle_color":"#222222","btn_bg_color":"#2da85c","btn_txt_color":"#ffffff","btn_border_color":"#222222","btn_hovertxt_color":"#ffffff","text_position":"left","text_effect":"top"}},"slideshow-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/slider-02_7c983e80-5567-478f-887c-7cabf00c2a2b.jpg","image_link":"#","show_video":false,"video_url":"","title":"Specialist in the grocery store","sub_title":"Discover 100% Organic Fresh","btn_txt":"Shop Now","btn_link":"#","title_color":"#222222","subtitle_color":"#222222","btn_bg_color":"#2da85c","btn_txt_color":"#ffffff","btn_border_color":"#222222","btn_hovertxt_color":"#ffffff","text_position":"left","text_effect":"bottom"}}},"block_order":["slideshow-0","slideshow-1"],"settings":{"slider_animation_type":"slide","slide_button_bg_color":"#ffffff","slide_button_hoverbg_color":"#2da85c","slide_button_txt_color":"#222222","slide_button_txt_hover_color":"#ffffff"}},"163946156501d2c177":{"type":"cmsright-banner","blocks":{"0c7dbf59-c2c4-4651-a96e-88e457cfa925":{"type":"image","settings":{"banner_image1":"shopify:\/\/shop_images\/banner-01_50fc95ed-4491-4f1a-b0ed-702eb7b5a5a0.jpg","banner_title1":"Banana  Chips","title1_color":"#222222","banner_subtitle1":"100% Organic","subtitle1_color":"#222222","banner_link1":"https:\/\/themes-organici.myshopify.com\/#","text_position":"left"}},"6eb5ed5b-eea2-48c1-a837-aad228946eca":{"type":"image","settings":{"banner_image1":"shopify:\/\/shop_images\/banner-02_c23ffa8c-f16c-4f56-9f8b-cf2c6182ef9d.jpg","banner_title1":"Fresh Bakery Items","title1_color":"#222222","banner_subtitle1":"Daily Fresh","subtitle1_color":"#222222","banner_link1":"","text_position":"right"}}},"block_order":["0c7dbf59-c2c4-4651-a96e-88e457cfa925","6eb5ed5b-eea2-48c1-a837-aad228946eca"],"settings":{}},"bottom-banner":{"type":"bottom-banner","settings":{"banner_image":"shopify:\/\/shop_images\/banner-03_9070660f-9730-4109-b11b-755033002f64.jpg","banner_link":"","banner_title":"100% Secure delivery without contacting the courier","title_color":"#2da85c","btn_text":"Shop Now","btn_link":"#","btn_bg_color":"#2da85c","btn_txt_color":"#ffffff","btn_txt_hover_color":"#ffffff","btn_bg_hover_color":"#222222"}},"1639565891094b0765":{"type":"category-feature","blocks":{"163956589154b53ad1-0":{"type":"text_collection","settings":{"image_1":"shopify:\/\/shop_images\/category-01_8742db4a-081b-4a2f-a3b1-b857c9276731.png","collection_cat_id":"vegetables","collection_title":"Fresh Vegetables","collection_desc":"Vegetables are parts of plants that are consumed by humans or other animals as food. The original meaning is still commonly used and is applied to plants collectively to refer to all edible plant matter, including the flowers, fruits, stems, leaves, roots, and seeds."}},"b0860d45-731d-4a7d-9829-c8a445e534ee":{"type":"text_collection","settings":{"image_1":"shopify:\/\/shop_images\/category-02_55b862c6-567d-42bf-855a-d593d1d848ea.png","collection_cat_id":"dry-fruits","collection_title":"Dry Fruits","collection_desc":"The Dairy Group includes milk, yogurt, cheese, lactose-free milk and fortified soy milk and yogurt. It does not include foods made from milk that have little calcium and a high fat content, such as cream cheese, sour cream, cream, and butter."}},"98fba79a-f76c-4614-9396-7e75c5914583":{"type":"text_collection","settings":{"image_1":"shopify:\/\/shop_images\/category-03_242f4925-afa0-47da-9476-0a5c8ef2a3b2.png","collection_cat_id":"bakery-item","collection_title":"Bakery Products","collection_desc":"Bakery and baked goods categories like bars, breads (bagels, buns, rolls, biscuits and loaf breads), cookies, desserts (cakes, cheesecakes and pies), muffins, pizza, snack cakes, sweet goods (doughnuts, Danish, sweet rolls, cinnamon rolls and coffee cake) and tortillas."}},"32279f7f-2c2d-485c-ada6-bdc2224e3e1d":{"type":"text_collection","settings":{"image_1":"shopify:\/\/shop_images\/category-04_155fb242-3286-40a5-a3d7-76816537d264.png","collection_cat_id":"fresh-fruits","collection_title":"Fresh Fruits","collection_desc":"There are few things in life that please people more than the succulence of quality fresh fruit and vegetables. At Fresh Fruits we work to deliver the world’s freshest, choicest, and juiciest produce to discerning customers across the UAE and GCC."}},"ba908b9e-e6a4-4726-8ca9-1fae4dc0b8e4":{"type":"text_collection","settings":{"image_1":"shopify:\/\/shop_images\/category-01_8742db4a-081b-4a2f-a3b1-b857c9276731.png","collection_cat_id":"organic-juice","collection_title":"Organic Juice","collection_desc":"In particular, organic agriculture is intended to produce high quality, nutritious food that contributes to preventive health care and well-being.\nIn view of this, it should avoid the use of fertilizers,pesticides, animal drugs and food additives that may have adverse health effects."}}},"block_order":["163956589154b53ad1-0","b0860d45-731d-4a7d-9829-c8a445e534ee","98fba79a-f76c-4614-9396-7e75c5914583","32279f7f-2c2d-485c-ada6-bdc2224e3e1d","ba908b9e-e6a4-4726-8ca9-1fae4dc0b8e4"],"settings":{"title":"Top Categories","title_color":"#222222","collection_title_color":"#222222","desc_color":"#666666"}},"product-tab-model":{"type":"product-tab-model","blocks":{"1595650811758-0":{"type":"text_block","settings":{"title":"Fresh Fruits","collection":"organic"}},"1595656887930":{"type":"text_block","settings":{"title":"Vegetables","collection":"vegetables"}},"1595656854289":{"type":"text_block","settings":{"title":"Bakery Item","collection":"bakery-item"}},"a16db016-d4e0-4080-95d9-61f3ffe70236":{"type":"text_block","settings":{"title":"Flour Mill","collection":"flour-mill"}}},"block_order":["1595650811758-0","1595656887930","1595656854289","a16db016-d4e0-4080-95d9-61f3ffe70236"],"settings":{"product_rows":false,"product_col":"5","title_1":"Categories Products","title_color":"#222222","button_bg":"#2da85c","button_text":"#ffffff"}},"163756421953792b50":{"type":"cms-banner","settings":{"banner1_img":"shopify:\/\/shop_images\/banner-04_73a39515-a2fa-4856-b4db-0dd4645cab44.jpg","banner1_url":"#","text1_position":"left","banner1_title":"Fresh Vegetable Base Soup","banner1_title_color":"#222222","banner1_subtitle":"Daily Fresh","banner1_subtitle_color":"#222222","btn1_text":"Shop Now","btn_link1":"#","btn1_bg_color":"#2da85c","btn1_txt_color":"#ffffff","btn1_txt_hover_color":"#ffffff","btn1_bg_hover_color":"#222222","banner2_img":"shopify:\/\/shop_images\/banner-05.jpg","banner2_url":"#","text2_position":"left","banner2_title":"Natural Egg Eat Every Day","banner2_title_color":"#222222","banner2_subtitle":"Weekend Discounts","banner2_subtitle_color":"#222222","btn2_text":"Shop Now","btn_link2":"#","btn2_bg_color":"#222222","btn2_txt_color":"#ffffff","btn2_txt_hover_color":"#ffffff","btn2_bg_hover_color":"#2da85c"}},"tt-testimonial":{"type":"tt-testimonial","blocks":{"1632395068fa19cfbc-0":{"type":"text","settings":{"text_desc":"\"Dessert pudding dessert jelly beans cup\ncaramelsgingerbread.Fruitcake biscuit cheesecake. Cooki\nmuffin puddingtart bear claw sugar plum croissant.\"","des_color":"#666666","image_1":"shopify:\/\/shop_images\/01.jpg","author_name":"Josephine Deep","author_designation":"- CEO & Founder","author_color":"#222222","author_descolor":"#666666"}},"1632395068fa19cfbc-1":{"type":"text","settings":{"text_desc":"\"Dessert pudding dessert jelly beans cup\ncaramelsgingerbread.Fruitcake biscuit cheesecake. Cooki\nmuffin puddingtart bear claw sugar plum croissant.\"","des_color":"#666666","image_1":"shopify:\/\/shop_images\/02.jpg","author_name":"Linnea Duff","author_designation":"- Manager","author_color":"#222222","author_descolor":"#666666"}},"1632395068fa19cfbc-2":{"type":"text","settings":{"text_desc":"\"Dessert pudding dessert jelly beans cup\ncaramelsgingerbread.Fruitcake biscuit cheesecake. Cooki\nmuffin puddingtart bear claw sugar plum croissant.\"","des_color":"#666666","image_1":"shopify:\/\/shop_images\/03.jpg","author_name":"Shira Roy","author_designation":"- Shop Keeper","author_color":"#222222","author_descolor":"#666666"}},"a2ca8c1b-d8a6-41f5-88b6-9a062813fbfd":{"type":"text","settings":{"text_desc":"\"Dessert pudding dessert jelly beans cup\ncaramelsgingerbread.Fruitcake biscuit cheesecake. Cooki\nmuffin puddingtart bear claw sugar plum croissant.\"","des_color":"#666666","image_1":"shopify:\/\/shop_images\/04.jpg","author_name":"Nina Williams","author_designation":"- Store Owner","author_color":"#222222","author_descolor":"#666666"}}},"block_order":["1632395068fa19cfbc-0","1632395068fa19cfbc-1","1632395068fa19cfbc-2","a2ca8c1b-d8a6-41f5-88b6-9a062813fbfd"],"settings":{"bg_color":"#f6f3ec","parallax_enable":true,"image":"shopify:\/\/shop_images\/testimonial-parallax.jpg"}},"special-product":{"type":"special-product","settings":{"class":"specialproduct","title":"Special Collections","title_color":"#525252","collection":"organic","product_col":"5"}},"cms-block-banner":{"type":"cms-block-banner","blocks":{"745bef52-001a-4c44-86b6-7b8877fd099f":{"type":"image","settings":{"banner_image1":"shopify:\/\/shop_images\/banner-06.jpg","banner_link1":"#","title":"Tasty Spices Masala","title_color":"#222222","subtitle":"Daily Fresh","subtitle_color":"#222222","btn":"Shop Now","btnbg_color":"#2da85c","btntxt_color":"#ffffff","btnhvr_color":"#222222","btnhvrtxt_color":"#ffffff","text_position":"left"}},"f705529b-c3ca-4773-99e2-c098b1acec4d":{"type":"image","settings":{"banner_image1":"shopify:\/\/shop_images\/banner-07.jpg","banner_link1":"#","title":"Fresh Bakery Products","title_color":"#222222","subtitle":"Weekend Discounts","subtitle_color":"#222222","btn":"Shop Now","btnbg_color":"#222222","btntxt_color":"#ffffff","btnhvr_color":"#2da85c","btnhvrtxt_color":"#ffffff","text_position":"left"}},"b14db795-74dc-4b64-8705-30132175f0f4":{"type":"image","settings":{"banner_image1":"shopify:\/\/shop_images\/banner-08.jpg","banner_link1":"#","title":"Tasty Venila Icecream","title_color":"#222222","subtitle":"Exclusive Offer","subtitle_color":"#222222","btn":"Shop Now","btnbg_color":"#2da85c","btntxt_color":"#ffffff","btnhvr_color":"#222222","btnhvrtxt_color":"#ffffff","text_position":"left"}},"008603c3-5daa-44f1-bf83-e15c3d1e4833":{"type":"image","settings":{"banner_link1":"","title":"Kid's Corner","title_color":"#f12a43","subtitle":"Kid's Corner","subtitle_color":"#f12a43","btn":"","btnbg_color":"","btntxt_color":"","btnhvr_color":"","btnhvrtxt_color":"","text_position":"left"}}},"block_order":["745bef52-001a-4c44-86b6-7b8877fd099f","f705529b-c3ca-4773-99e2-c098b1acec4d","b14db795-74dc-4b64-8705-30132175f0f4","008603c3-5daa-44f1-bf83-e15c3d1e4833"],"settings":{}},"cms-services":{"type":"cms-services","blocks":{"1614071790f5f451ac-0":{"type":"s_text","settings":{"service_icon":"shopify:\/\/shop_images\/01_201cbcd5-fe1c-483f-87b9-112568e938e6.png","title":"Shop Worldwide","desc":"Dropship Worldwide"}},"1614071790f5f451ac-1":{"type":"s_text","settings":{"service_icon":"shopify:\/\/shop_images\/03_aa8c6adf-cf40-40f0-a773-0d0be4b75a47.png","title":"Big Saving Shop","desc":"Save Big Every Order"}},"1614071790f5f451ac-2":{"type":"s_text","settings":{"service_icon":"shopify:\/\/shop_images\/02_0d1a7cfd-3a0e-4265-a2ba-6e9bac5f7973.png","title":"24H 7D Support","desc":"One-on-one Support"}},"1614071790f5f451ac-3":{"type":"s_text","settings":{"service_icon":"shopify:\/\/shop_images\/04_bf19e646-e5fb-430f-a271-cec8796bc241.png","title":"Money Back Return","desc":"Cancel Order Anytime"}}},"block_order":["1614071790f5f451ac-0","1614071790f5f451ac-1","1614071790f5f451ac-2","1614071790f5f451ac-3"],"settings":{"bg_color":"#2da85c","title_color":"#ffffff","title_hover_color":"#ffffff","desc_color":"#ffffff","icon_color":"#ffffff","icon_hover_color":"#ffffff"}},"feature-blogs":{"type":"feature-blogs","settings":{"title":"Latest News","blog":"blog","blog_design":"design_1","product_col":"4","post_limit":"5","blog_btn_text":"#222222","blog_btn_hover_bg":"#2da85c","blog_hover_btn_text":"#ffffff","blog_date_color":"#ffffff","blog_bgdate_color":"#2da85c","show_view_all":false,"blog_show_date":true}},"our_brand":{"type":"our_brand","blocks":{"1605783755d6d9f598-0":{"type":"brand_image","settings":{"image":"shopify:\/\/shop_images\/04_fa475c34-7d48-4bb7-af1c-79bf9775c538.png","link":"#"}},"1605783755d6d9f598-1":{"type":"brand_image","settings":{"image":"shopify:\/\/shop_images\/01_5fc21f6d-a528-427d-881f-f1cbebea3d9f.png","link":"#"}},"1605783755d6d9f598-2":{"type":"brand_image","settings":{"image":"shopify:\/\/shop_images\/07_5d544a92-c0fd-41db-8dc6-f57a7523b971.png","link":"#"}},"1605783755d6d9f598-3":{"type":"brand_image","settings":{"image":"shopify:\/\/shop_images\/03_e4d6f35e-b455-4c13-aadc-dda58216370d.png","link":"#"}},"1605783755d6d9f598-4":{"type":"brand_image","settings":{"image":"shopify:\/\/shop_images\/02_dd9c4981-6d93-46e8-b2f1-b877d10c2cdf.png","link":"#"}},"1605783755d6d9f598-5":{"type":"brand_image","settings":{"image":"shopify:\/\/shop_images\/08_873e8be8-1365-4c25-b755-aec0f9d03236.png","link":"#"}},"b0140af0-34a1-46f5-865c-f7836ea8890e":{"type":"brand_image","settings":{"image":"shopify:\/\/shop_images\/06_f3681d19-a954-4810-9cb6-b56320412653.png","link":""}},"dda6d276-d384-4291-9433-9bb695514ba4":{"type":"brand_image","settings":{"image":"shopify:\/\/shop_images\/05_24122bf2-5530-4b84-bd7f-e5bd69f75011.png","link":""}}},"block_order":["1605783755d6d9f598-0","1605783755d6d9f598-1","1605783755d6d9f598-2","1605783755d6d9f598-3","1605783755d6d9f598-4","1605783755d6d9f598-5","b0140af0-34a1-46f5-865c-f7836ea8890e","dda6d276-d384-4291-9433-9bb695514ba4"],"settings":{"addclass":"brands"}}},"order":["slideshow","163946156501d2c177","bottom-banner","1639565891094b0765","product-tab-model","163756421953792b50","tt-testimonial","special-product","cms-block-banner","cms-services","feature-blogs","our_brand"]}
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SDON_storeBanner.png",
+            "image_link": "#",
+            "show_video": false,
+            "video_url": "https:\/\/www.youtube.com\/watch?v=7xPYirJj9IY",
+            "title": "Sime Darby Berhad Corporate Video 2020",
+            "sub_title": "Sime Darby Berhad Corporate Video 2020",
+            "btn_txt": "Shop Now",
+            "btn_link": "#",
+            "title_color": "#ffffff",
+            "subtitle_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_txt_color": "#111111",
+            "btn_border_color": "#f63d64",
+            "btn_hovertxt_color": "#ffffff",
+            "text_position": "left",
+            "text_effect": "left"
+          }
+        },
+        "slideshow-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LAB-Banting-SDP-RD-P-1.png",
+            "image_link": "#",
+            "show_video": false,
+            "video_url": "",
+            "title": "WE ARE BEYOND NUTRITION",
+            "sub_title": "Discover 100% Organic & Fresh",
+            "btn_txt": "Shop Now",
+            "btn_link": "#",
+            "title_color": "#ffffff",
+            "subtitle_color": "#ffffff",
+            "btn_bg_color": "#222222",
+            "btn_txt_color": "#ffffff",
+            "btn_border_color": "#ffffff",
+            "btn_hovertxt_color": "#222222",
+            "text_position": "center",
+            "text_effect": "right"
+          }
+        }
+      },
+      "block_order": [
+        "slideshow-0",
+        "slideshow-1"
+      ],
+      "settings": {
+        "slider_animation_type": "slide",
+        "slide_button_bg_color": "#ffffff",
+        "slide_button_hoverbg_color": "#f63d64",
+        "slide_button_txt_color": "#222222",
+        "slide_button_txt_hover_color": "#ffffff"
+      }
+    },
+    "cms-services": {
+      "type": "cms-services",
+      "blocks": {
+        "1614071790f5f451ac-0": {
+          "type": "s_text",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/03_e4d6f35e-b455-4c13-aadc-dda58216370d.png",
+            "title": "100% Organic",
+            "desc": "Lorem ipsum dolor sit amet, mauris tincidunt lobortis eleifend"
+          }
+        },
+        "1614071790f5f451ac-1": {
+          "type": "s_text",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/03_e4d6f35e-b455-4c13-aadc-dda58216370d.png",
+            "title": "Daily Fresh & Natural",
+            "desc": "Lorem ipsum dolor sit amet, mauris tincidunt lobortis eleifend"
+          }
+        },
+        "1614071790f5f451ac-2": {
+          "type": "s_text",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/03_e4d6f35e-b455-4c13-aadc-dda58216370d.png",
+            "title": "100% Healthy Food",
+            "desc": "Lorem ipsum dolor sit amet, mauris tincidunt lobortis eleifend"
+          }
+        },
+        "dc05f61c-de73-445f-b9b3-61f650cc27e9": {
+          "type": "s_text1",
+          "settings": {
+            "service_icon1": "shopify:\/\/shop_images\/03_e4d6f35e-b455-4c13-aadc-dda58216370d.png",
+            "title1": "Fast Delivery",
+            "desc1": "Lorem ipsum dolor sit amet, mauris tincidunt lobortis eleifend"
+          }
+        },
+        "9e2bff05-6aff-4d71-84ef-8e81f8fc26f8": {
+          "type": "s_text1",
+          "settings": {
+            "service_icon1": "shopify:\/\/shop_images\/03_e4d6f35e-b455-4c13-aadc-dda58216370d.png",
+            "title1": "Free Shipping",
+            "desc1": "Lorem ipsum dolor sit amet, mauris tincidunt lobortis eleifend"
+          }
+        },
+        "2510cdab-48af-4fd2-a5c3-4cd37981f1d5": {
+          "type": "s_text1",
+          "settings": {
+            "service_icon1": "shopify:\/\/shop_images\/03_e4d6f35e-b455-4c13-aadc-dda58216370d.png",
+            "title1": "Halal",
+            "desc1": "Lorem ipsum dolor sit amet, mauris tincidunt lobortis eleifend"
+          }
+        }
+      },
+      "block_order": [
+        "1614071790f5f451ac-0",
+        "1614071790f5f451ac-1",
+        "1614071790f5f451ac-2",
+        "dc05f61c-de73-445f-b9b3-61f650cc27e9",
+        "9e2bff05-6aff-4d71-84ef-8e81f8fc26f8",
+        "2510cdab-48af-4fd2-a5c3-4cd37981f1d5"
+      ],
+      "settings": {
+        "bg_color": "#f7f4ef",
+        "img": "",
+        "title_color": "#222222",
+        "title_hover_color": "#f63d64",
+        "desc_color": "#666666"
+      }
+    },
+    "dfc8f770-5a06-4f90-9edb-be3e5d9f7136": {
+      "type": "cms-banner",
+      "settings": {
+        "banner1_img": "shopify:\/\/shop_images\/newsletter-parallax_107df9de-6702-4c3f-b202-53f5d9230807.jpg",
+        "banner1_url": "shopify:\/\/pages\/gold-trie",
+        "text1_position": "left",
+        "banner1_title": "Promotion Banner",
+        "banner1_title_color": "",
+        "btn1_text": "Shop now",
+        "btn_link1": "shopify:\/\/collections\/all",
+        "btn1_bg_color": "",
+        "btn1_txt_color": "",
+        "btn1_txt_hover_color": "",
+        "btn1_bg_hover_color": "",
+        "banner2_img": "shopify:\/\/shop_images\/newsletter-parallax_066eaa5c-ce03-411e-b119-242e7ffa166c.jpg",
+        "banner2_url": "",
+        "text2_position": "left",
+        "banner2_title": "Promotion Banner",
+        "banner2_title_color": "",
+        "btn2_text": "Shop now",
+        "btn_link2": "shopify:\/\/collections\/all",
+        "btn2_bg_color": "",
+        "btn2_txt_color": "",
+        "btn2_txt_hover_color": "",
+        "btn2_bg_hover_color": ""
+      }
+    },
+    "product-tab-model": {
+      "type": "product-tab-model",
+      "blocks": {
+        "1595650811758-0": {
+          "type": "text_block",
+          "settings": {
+            "title": "Natrieo",
+            "icon_bgcolor": "#f5e7ce",
+            "collection": "organic"
+          }
+        },
+        "1595656887930": {
+          "type": "text_block",
+          "settings": {
+            "title": "Gold Trie",
+            "icon_bgcolor": "#ffd8d6",
+            "collection": "vegetables"
+          }
+        },
+        "a16db016-d4e0-4080-95d9-61f3ffe70236": {
+          "type": "text_block",
+          "settings": {
+            "title": "Elaiese",
+            "icon_bgcolor": "#f5e7ce",
+            "collection": "flour-mill"
+          }
+        },
+        "efb5595a-6a78-4451-897a-3a6419beb664": {
+          "type": "text_block",
+          "settings": {
+            "title": "T3rra-oil",
+            "icon_bgcolor": "#ffd8d6",
+            "collection": "dairy-item"
+          }
+        }
+      },
+      "block_order": [
+        "1595650811758-0",
+        "1595656887930",
+        "a16db016-d4e0-4080-95d9-61f3ffe70236",
+        "efb5595a-6a78-4451-897a-3a6419beb664"
+      ],
+      "settings": {
+        "product_rows": false,
+        "product_col": "4",
+        "subtitle": "Shop By Top Brands",
+        "subtitle_color": "#f63d64",
+        "title_1": "Our Brands",
+        "title_color": "#222222",
+        "title_hover_color": "#f63d64",
+        "item_color": "#666666",
+        "icon_color": "#222222"
+      }
+    },
+    "tt-testimonial": {
+      "type": "tt-testimonial",
+      "blocks": {
+        "1632395068fa19cfbc-0": {
+          "type": "text",
+          "settings": {
+            "text_desc": "\"Dessert pudding dessert jelly beans cup\ncaramelsgingerbread.Fruitcake biscuit cheesecake. Cooki\nmuffin puddingtart bear claw sugar plum croissant.\"",
+            "des_color": "#666666",
+            "author_name": "Josephine Deep",
+            "author_designation": "- CEO & Founder",
+            "author_color": "#222222",
+            "author_descolor": "#666666"
+          }
+        },
+        "1632395068fa19cfbc-1": {
+          "type": "text",
+          "settings": {
+            "text_desc": "\"Dessert pudding dessert jelly beans cup\ncaramelsgingerbread.Fruitcake biscuit cheesecake. Cooki\nmuffin puddingtart bear claw sugar plum croissant.\"",
+            "des_color": "#666666",
+            "author_name": "Linnea Duff",
+            "author_designation": "- Manager",
+            "author_color": "#222222",
+            "author_descolor": "#666666"
+          }
+        },
+        "1632395068fa19cfbc-2": {
+          "type": "text",
+          "settings": {
+            "text_desc": "\"Dessert pudding dessert jelly beans cup\ncaramelsgingerbread.Fruitcake biscuit cheesecake. Cooki\nmuffin puddingtart bear claw sugar plum croissant.\"",
+            "des_color": "#666666",
+            "author_name": "Shira Roy",
+            "author_designation": "- Shop Keeper",
+            "author_color": "#222222",
+            "author_descolor": "#666666"
+          }
+        },
+        "a2ca8c1b-d8a6-41f5-88b6-9a062813fbfd": {
+          "type": "text",
+          "settings": {
+            "text_desc": "\"Dessert pudding dessert jelly beans cup\ncaramelsgingerbread.Fruitcake biscuit cheesecake. Cooki\nmuffin puddingtart bear claw sugar plum croissant.\"",
+            "des_color": "#666666",
+            "author_name": "Nina Williams",
+            "author_designation": "- Store Owner",
+            "author_color": "#222222",
+            "author_descolor": "#666666"
+          }
+        }
+      },
+      "block_order": [
+        "1632395068fa19cfbc-0",
+        "1632395068fa19cfbc-1",
+        "1632395068fa19cfbc-2",
+        "a2ca8c1b-d8a6-41f5-88b6-9a062813fbfd"
+      ],
+      "settings": {
+        "bg_color": "#f6f3ec",
+        "parallax_enable": true,
+        "image": "shopify:\/\/shop_images\/testimonial-parallax_cbe8a5d6-669d-4b48-b4f3-52b4861abcf6.jpg"
+      }
+    },
+    "our_brand": {
+      "type": "our_brand",
+      "disabled": true,
+      "blocks": {
+        "1605783755d6d9f598-0": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ispo_2x-300x300.png",
+            "link": "#"
+          }
+        },
+        "1605783755d6d9f598-1": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mspo_2x_ab962cfc-8ad9-40f4-ba47-7230bd9a8f2f.png",
+            "link": "#"
+          }
+        },
+        "1605783755d6d9f598-2": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ispo_2x-300x300.png",
+            "link": "#"
+          }
+        },
+        "1605783755d6d9f598-3": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mspo_2x_ab962cfc-8ad9-40f4-ba47-7230bd9a8f2f.png",
+            "link": "#"
+          }
+        },
+        "1605783755d6d9f598-4": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ispo_2x-300x300.png",
+            "link": "#"
+          }
+        },
+        "1605783755d6d9f598-5": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mspo_2x_ab962cfc-8ad9-40f4-ba47-7230bd9a8f2f.png",
+            "link": "#"
+          }
+        },
+        "42a24642-404b-4de7-9fae-d7e4f9b3f464": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ispo_2x-300x300.png",
+            "link": ""
+          }
+        },
+        "76302714-2ef5-45e6-81c4-67306db0ce13": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mspo_2x_ab962cfc-8ad9-40f4-ba47-7230bd9a8f2f.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1605783755d6d9f598-0",
+        "1605783755d6d9f598-1",
+        "1605783755d6d9f598-2",
+        "1605783755d6d9f598-3",
+        "1605783755d6d9f598-4",
+        "1605783755d6d9f598-5",
+        "42a24642-404b-4de7-9fae-d7e4f9b3f464",
+        "76302714-2ef5-45e6-81c4-67306db0ce13"
+      ],
+      "settings": {
+        "addclass": "brands"
+      }
+    },
+    "163782920539d77551": {
+      "type": "cms-subbanner",
+      "settings": {
+        "banner1_img": "shopify:\/\/shop_images\/GEN-P-16_63fa3b3f-a9ce-4d8f-8d7e-fb161f1924db.png",
+        "banner1_url": "#",
+        "text1_position": "center",
+        "banner1_title": "Shopping Bundle 1",
+        "banner1_title_color": "#ffffff",
+        "banner1_subtitle": "Tasty Potato Chips",
+        "banner1_subtitle_color": "#ffffff",
+        "btn1_text": "Shop Now",
+        "btn_link1": "#",
+        "btn1_bg_color": "#ffffff",
+        "btn1_txt_color": "#222222",
+        "btn1_txt_hover_color": "#ffffff",
+        "btn1_bg_hover_color": "#f63d64",
+        "banner2_img": "shopify:\/\/shop_images\/GEN-P-16_63fa3b3f-a9ce-4d8f-8d7e-fb161f1924db.png",
+        "banner2_url": "#",
+        "text2_position": "center",
+        "banner2_title": "Shopping Bundle 2",
+        "banner2_title_color": "#ffffff",
+        "banner2_subtitle": "100% Natural",
+        "banner2_subtitle_color": "#ffffff",
+        "btn2_text": "Shop Now",
+        "btn_link2": "#",
+        "btn2_bg_color": "#ffffff",
+        "btn2_txt_color": "#222222",
+        "btn2_txt_hover_color": "#ffffff",
+        "btn2_bg_hover_color": "#222222",
+        "banner3_url": "#",
+        "text3_position": "left",
+        "banner3_title": "Shopping Bundle 3",
+        "banner3_title_color": "#ffffff",
+        "banner3_subtitle": "Save 45% OFF",
+        "banner3_subtitle_color": "#ffffff",
+        "btn3_text": "Shop Now",
+        "btn_link3": "#",
+        "btn3_bg_color": "#ffffff",
+        "btn3_txt_color": "#222222",
+        "btn3_txt_hover_color": "#ffffff",
+        "btn3_bg_hover_color": "#f63d64",
+        "banner4_img": "shopify:\/\/shop_images\/GEN-P-16_63fa3b3f-a9ce-4d8f-8d7e-fb161f1924db.png",
+        "banner4_url": "#",
+        "text4_position": "center",
+        "banner4_title": "Shopping Bundle 3",
+        "banner4_title_color": "#ffffff",
+        "banner4_subtitle": "Non-alchoholic",
+        "banner4_subtitle_color": "#ffffff",
+        "btn4_text": "Shop Now",
+        "btn_link4": "#",
+        "btn4_bg_color": "#ffffff",
+        "btn4_txt_color": "#222222",
+        "btn4_txt_hover_color": "#ffffff",
+        "btn4_bg_hover_color": "#222222"
+      }
+    },
+    "163783200495306c1c": {
+      "type": "cms-countdown",
+      "settings": {
+        "bg_color": "#f6f3ec",
+        "parallax_enable": true,
+        "parallax_img": "shopify:\/\/shop_images\/testimonial-parallax_b03f9e4e-eb37-4c08-baa3-7df8d6068d55.jpg",
+        "banner_subtitle": "Deal Of the Day",
+        "banner_subtitle_color": "#f63d64",
+        "banner_title": "Big Clearance Sale Get Up to 70% OFF, Hurry Up!",
+        "banner_title_color": "#222222",
+        "last_date": "2022\/12\/18",
+        "countdown_num_color": "#f63d64",
+        "countdown_text_color": "#222222",
+        "btn_text": "Shop Now",
+        "banner_url": "#",
+        "btn_bg_color": "#222222",
+        "btn_txt_color": "#ffffff",
+        "btn_txt_hover_color": "#ffffff",
+        "btn_bg_hover_color": "#f63d64"
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "cms-services",
+    "dfc8f770-5a06-4f90-9edb-be3e5d9f7136",
+    "product-tab-model",
+    "tt-testimonial",
+    "our_brand",
+    "163782920539d77551",
+    "163783200495306c1c"
+  ]
+}

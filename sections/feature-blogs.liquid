@@ -11,10 +11,14 @@
     color:{{ section.settings.blog_date_color }};
     background-color:{{ section.settings.blog_bgdate_color }};
   }
+  .feature-blog .subtitle{
+    color:{{ section.settings.subtitle_color }};
+  }
 </style>
 <div class="page-width blog_latest_new_home" data-section-id="{{ section.id }}" data-section-type="blog_latest_new_home-section">
   <div class="container" data-aos="fade-up">
     <header class="section-header">        
+      <div class="subtitle">{{ section.settings.subtitle | escape }}</div>
       <h2 class="tt-title">{{ section.settings.title | escape }}</h2>
     </header>
     {%- assign blog = blogs[section.settings.blog] -%}
@@ -124,6 +128,16 @@
 "settings": [
 {
 "type": "text",
+"id": "subtitle",
+"label": "Subtitle"
+},
+{
+"type": "color",
+"id": "subtitle_color",
+"label": "Subtitle Color"
+},
+{
+"type": "text",
 "id": "title",
 "label": "Heading",
 "default": "Blog posts"
@@ -224,7 +238,7 @@
 {
 "type": "color",
 "id": "blog_bgdate_color",
-"label": "Blog date background color",
+"label": "Blog background date color",
 "default": "#000"
 },
 {
@@ -252,4 +266,4 @@
 ]
 }
 {% endschema %}
-<script>var blogowlrtl=$("body.rtl .grid-blog-slider");$("body.rtl .grid-blog-slider").owlCarousel({items:{{section.settings.product_col}},loop:!1,rewind:false,nav:!0,rtl:!0,dots:!1,responsive:{100:{items:1},543:{items:2},992:{items:2},1200:{items:{{section.settings.product_col}}}}});var blogowl=$("body:not(.rtl) .grid-blog-slider");$("body:not(.rtl) .grid-blog-slider").owlCarousel({items:3,loop:!1,nav:!0,rtl:!1,dots:!1,rewind:false,responsive:{100:{items:1},543:{items:2},992:{items:2},1200:{items:{{section.settings.product_col}}}}});$('.grid--blog').each(function(){if($(this).find('.owl-nav').hasClass('disabled')){$(this).find('.customNavigation').hide()}else{$(this).find('.customNavigation').show()}});$(".blog_next").click(function(){$(".grid-blog-slider").trigger('next.owl')});$(".blog_prev").click(function(){$(".grid-blog-slider").trigger('prev.owl')});</script>
+<script>var blogowlrtl=$("body.rtl .grid-blog-slider");$("body.rtl .grid-blog-slider").owlCarousel({items:{{section.settings.product_col}},loop:!1,rewind:false,nav:!1,rtl:!0,dots:!0,responsive:{100:{items:1},543:{items:2},992:{items:2},1200:{items:{{section.settings.product_col}}}}});var blogowl=$("body:not(.rtl) .grid-blog-slider");$("body:not(.rtl) .grid-blog-slider").owlCarousel({items:3,loop:!1,nav:!1,rtl:!1,dots:!0,rewind:false,responsive:{100:{items:1},543:{items:2},992:{items:2},1200:{items:{{section.settings.product_col}}}}});$('.grid--blog').each(function(){if($(this).find('.owl-nav').hasClass('disabled')){$(this).find('.customNavigation').hide()}else{$(this).find('.customNavigation').show()}});$(".blog_next").click(function(){$(".grid-blog-slider").trigger('next.owl')});$(".blog_prev").click(function(){$(".grid-blog-slider").trigger('prev.owl')});</script>

@@ -8,6 +8,9 @@
   <div class="container">
     <div class="special-product-div {{ section.settings.class }} special-product TTProduct-Tab tab-content" data-aos="fade-up">    
       <div class="box-heading tthometab-title section-header">
+        {% if section.settings.subtitle != blank %}
+        <div class="subtitle">{{ section.settings.subtitle }}</div>
+        {% endif %}
         {% if section.settings.title != blank %}
         <h2 class="tt-title">{{ section.settings.title | escape }}</h2>
         {% endif %}
@@ -16,7 +19,7 @@
         <div id="{{ section.settings.class }}_products_slider" data-col="{{ section.settings.product_col }}"  class="contents tab-pane slider-specialproduct grid grid--view-items owl-carousel owl-theme" data-col="{{ section.settings.product_col }}">
           {% for product in collection.products limit: product_limit %}                
            <div class="{{ grid_item_width }}">
-                {% render 'product-card-grid', grid_image_width: image_size, collection: collection, product: product %}
+                {% render 'product-card-grid', grid_image_width: image_size, collection: collection. product: product %}
               </div>
           {% else %}
           {% for i in (1..product_limit) %}
@@ -57,6 +60,17 @@
 "id": "class",
 "label": "Add Class",
 "default": "specialproduct"
+},
+{
+"type": "text",
+"id": "subtitle",
+"label": "Section Sub Title"
+},
+{
+"type": "color",
+"id": "subtitle_color",
+"label": "Sub Title Color",
+"default":"#fff"
 },
 {
 "type": "text",

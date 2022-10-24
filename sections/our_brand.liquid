@@ -1,28 +1,28 @@
 <div class="page-width brands_slider_wrap" data-section-id="{{ section.id }}">
-  <div class="brands container bottom-to-top hb-animate-element">
+  <div class="container bottom-to-top hb-animate-element">
     {%- assign product_limit =  9 -%}
-        <div id="{{ section.settings.addclass }}_list_slider" class="tt-brand_slider owl-carousel owl-theme">
-          {% if section.blocks.size > 0 %}
-          {% for block in section.blocks limit:product_limit %}
-          <div class="brand-bar__item" {{ block.shopify_attributes }}>
-            {% if block.settings.link != blank %}
-            <a href="{{ block.settings.link }}">
-              {% endif %}
-              {% if block.settings.image != blank %}
-              <img width="130" src="{{ block.settings.image | img_url: "master"  }}" alt="brand-logo" class="brand-bar__image"/>
-              {% else %}
-              {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
-              {% endif %}
-              {% if block.settings.link != blank %}
-            </a>
-            {% endif %}
-          </div>
-          {% endfor %}
-        </div>
-      {% endif %}   
-      {% if section.blocks.size == 0 %}
-      {% render 'no-blocks' %}
-      {% endif %}
+    <div id="{{ section.settings.addclass }}_list_slider" class="tt-brand_slider owl-carousel owl-theme">
+      {% if section.blocks.size > 0 %}
+      {% for block in section.blocks limit:product_limit %}
+      <div class="brand-bar__item" {{ block.shopify_attributes }}>
+        {% if block.settings.link != blank %}
+        <a href="{{ block.settings.link }}">
+          {% endif %}
+          {% if block.settings.image != blank %}
+          <img width="130" src="{{ block.settings.image | img_url: "master"  }}" alt="brand-logo" class="brand-bar__image"/>
+          {% else %}
+          {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+          {% if block.settings.link != blank %}
+        </a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}   
+    {% if section.blocks.size == 0 %}
+    {% render 'no-blocks' %}
+    {% endif %}
   </div>
 </div>
 {% schema %}
