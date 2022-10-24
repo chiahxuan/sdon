@@ -21,13 +21,12 @@
     {% endif %}    
 
     <!-- Social meta ================================================== -->
-    {% include 'social-meta-tags' %}
+    {% render 'social-meta-tags' %}
     <!-- Helpers ================================================== -->
     <link rel="canonical" href="{{ canonical_url }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-    {% include 'css-variables' %}
+    {% render 'css-variables' %}
 
     <!-- CSS ================================================== -->
     {{ 'owl.carousel.css' | asset_url | stylesheet_tag }}   
@@ -36,13 +35,14 @@
     {{ 'magnific-popup.min.css' | asset_url | stylesheet_tag }}
     {{ 'animate.css' | asset_url | stylesheet_tag }} 
     {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }} 
+    {{ 'aos.css' | asset_url | stylesheet_tag }}
     {{ 'theme.css' | asset_url | stylesheet_tag }}
 
-    {% include 'google-fonts' %}
+    {% render 'google-fonts' %}
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
     <!-- Header hook for plugins ================================================== -->
     {{ content_for_header }}
-    {% include 'oldIE-js' %}  
+    {% render 'oldIE-js' %}  
     {% comment %}
     If you store has customers disabled, you can remove the following JS file
     {% endcomment %}
@@ -54,6 +54,7 @@
     {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
     {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
     {% endif %}
+
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'aos.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
@@ -73,7 +74,7 @@
     <script src="{{ 'lightbox-2.6.min.js' | asset_url }}" defer="defer"></script> 
     <script src="{{ 'parallax.min.js' | asset_url }}" defer="defer"></script> 
     <script src="{{ 'shop.js' | asset_url }}" defer="defer"></script> 
-    <script src="{{ 'ResizeSensor.min.js' | asset_url }}" defer="defer"></script> 
+    <script src="{{ 'ResizeSensor.min.js' | asset_url }}   " defer="defer"></script> 
     <script src="{{ 'theia-sticky-sidebar.min.js' | asset_url}}" defer="defer"></script>     
     <script src="{{ 'inview.js' | asset_url  }}" defer="defer"></script>     
     <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>    
@@ -87,7 +88,7 @@
 
     <script>window.money_format = "{{shop.money_with_currency_format}}";window.shop_currency = "{{ shop.currency }}";window.show_multiple_currencies = {{settings.enable_multiple_currencies}};window.many_in_stock="{{ 'products.product.many_in_stock' | t  }}";window.out_of_stock="{{ 'products.product.out_of_stock' | t  }}";window.in_stock="{{ 'products.product.in_stock' | t  }}";window.unavailable="{{ 'products.product.unavailable' | t  }}";</script>  
     <style>.ttloader {background-color:  {{ settings.preloader_bg }};height: 100%;left: 0;position: fixed;top: 0; width: 100%; z-index: 999999;}.rotating {background-image: url("{{ settings.pre_loader_img | img_url: "master" }}");}.rotating {background-position: center center;background-repeat: no-repeat;bottom: 0;height: auto;left: 0;margin: auto;position: absolute;right: 0; top: 0; width: 100%; }</style>
-    <script type="text/javascript">
+    <script>
       if (window.MSInputMethodContext && document.documentMode) {
         var scripts = document.getElementsByTagName('script')[0];
         var polyfill = document.createElement("script");
@@ -99,7 +100,7 @@
     </script>
   </head>
   <body id="{{ page_title | handle }}" class="{{ settings.toggle_menu_position }} header_{{ settings.header_style_1 }} footer_{{ settings.footer_style_1 }} hover_{{ settings.product_hover_btn }} {% if settings.display_toogle_menu == false %}menu-content{% endif %} {% if shop.locale == 'ar' or shop.locale == 'he' or shop.locale == 'ur' %}rtl {% endif %}{{ settings.header_icon_color }} {{ page_title | handle }} {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if settings.display_toogle_menu  == false %} left-menu{% else %} toggle-menu{% endif %}">
-    {% include 'modal-box' %}
+    {% render 'modal-box' %}
     <div class="quick-view"></div> 
 
     <div class="compare-model">
@@ -144,7 +145,7 @@
       <main class="main-content">
         <div class="container-fluid">
           <div class="breadcrumb-block">
-            <nav class="breadcrumb-wrapper{% if settings.enable_breadcrumb_bg and settings.breadcrumb_parallax %} parallex breadcrumb-img{% else %} breadcrumb-content{% endif %}" {% if settings.enable_breadcrumb_bg and settings.breadcrumb_parallax %} data-source-url="{{ settings.breadcrumb_parallax | img_url: 'master' }}"{% endif %} style="{% if settings.enable_breadcrumb_bg and settings.breadcrumb_parallax %}background-image: url('{{ settings.breadcrumb_parallax | img_url: "master" }}');background-position: 50% 35.5739%; {% endif %}background-color: {{ settings.breadcrumb_bg_color }};background-size:cover;" aria-label="breadcrumbs">               {% include 'breadcrumb' %} 
+            <nav class="breadcrumb-wrapper{% if settings.enable_breadcrumb_bg and settings.breadcrumb_parallax %} parallex breadcrumb-img{% else %} breadcrumb-content{% endif %}" {% if settings.enable_breadcrumb_bg and settings.breadcrumb_parallax %} data-source-url="{{ settings.breadcrumb_parallax | img_url: 'master' }}"{% endif %} style="{% if settings.enable_breadcrumb_bg and settings.breadcrumb_parallax %}background-image: url('{{ settings.breadcrumb_parallax | img_url: "master" }}');background-position: 50% 35.5739%; {% endif %}background-color: {{ settings.breadcrumb_bg_color }};background-size:cover;" aria-label="breadcrumbs">                {% render 'breadcrumb' %} 
             </nav>
           </div>
           {{ content_for_layout }}
@@ -158,7 +159,7 @@
         {% section 'footer-model-3' %}
         {% endcase %}
         {% section 'recommendations-product' %}
-        {% include 'site-cookie' %}
+        {% render 'site-cookie' %}
       </main>
 
       {% if template.name == 'product' %}
@@ -172,17 +173,17 @@
           jQuery(".ttloader .rotating").addClass("load-open");  
         });
       </script>  
-      {% include 'quick-veiw' %}
+      {% render 'quick-veiw' %}
       {% if template == 'index' %}
-      {% include 'popup-newsletter' %}
+      {% render 'popup-newsletter' %}
       {% endif %}
       <a href="#" id="GotoTop"><span id="toTopHover"></span><i class="mdi mdi-chevron-up"></i></a>
     </div>
     <script>/* Product Tag Filters - Good for any number of filters on any type of collection pages */var collFilters = jQuery('.coll-filter');collFilters.change(function() {var newTags = [];collFilters.each(function() {if (jQuery(this).val()) {newTags.push(jQuery(this).val());}});if (newTags.length) {var query = newTags.join('+');window.location.href = jQuery('{{ 'tag' | link_to_tag: 'tag' }}').attr('href').replace('/' + 'tag', '/' + query);}else {
           {% if collection.handle %}window.location.href = '/collections/{{ collection.handle }}';{% elsif collection.products.first.type == collection.title %}window.location.href = '{{ collection.title | url_for_type }}';{% elsif collection.products.first.vendor == collection.title %}window.location.href = '{{ collection.title | url_for_vendor }}';{% endif %}}});</script>    
     <script>jQuery(document).ready(function() {	"use strict";/* ------------ Start TemplateTrip Parallax JS ------------ */var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);if(!isMobile) {if(jQuery(".parallex").length){jQuery(".parallex:not(.invert_true)").sitManParallex({ invert: false});};  if(jQuery(".parallex.invert_true").length){jQuery(".parallex").sitManParallex({ invert: true});}; }else{jQuery(".parallex:not(.invert_true)").sitManParallex({invert: true});jQuery(".parallex.invert_true").sitManParallex({invert: true});}	/* ------------ End TemplateTrip Parallax JS ------------ */});</script>
-    {% include 'currencies' %}   
-    {% include 'search-autocomplete' %}
+    {% render 'currencies' %}   
+    {% render 'search-autocomplete' %}
     {% if template contains 'product' %}
     <script>Shopify.Products.recordRecentlyViewed();</script>
     {% endif %}

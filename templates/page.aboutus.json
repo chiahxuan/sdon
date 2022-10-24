@@ -1,153 +1,143 @@
 {
-  "sections": {
-    "main": {
-      "type": "aboutus-page-img",
-      "settings": {
-        "about_subtitle_color": "#f63d64",
-        "about_subtitle": "Collection 2021",
-        "about_title_color": "#222222",
-        "about_title": "Best Organic Shop",
-        "about_desc_color": "#666666",
-        "about_desc": "Apparently we had reached a great height in the atmosphere, for the sky was a dead black and there a stars.",
-        "about_btn_url": "#",
-        "about_btn": "Shop Now",
-        "about_us": "shopify:\/\/shop_images\/about-11.jpg",
-        "about_sub_title1_color": "#373737",
-        "about_sub_title1": "Welcome to Organic Food Store",
-        "about_sub_desc1_color": "#666666",
-        "about_sub_desc1": "With all his cruel ferocity and coldness there was an under of something in Tars Tarkas which he seemed ever battling to subdue. Could it be a of some human \ninstinct come back",
-        "about_sub_title2_color": "#373737",
-        "about_sub_title2": "Up to 40% Off  on All Items.",
-        "about_sub_desc2_color": "#666666",
-        "about_sub_desc2": "With all his cruel ferocity and coldness there was an under of something in Tars Tarkas which he seemed ever battling to subdue. Could it be a of some human instinct come back.",
-        "video_img": "shopify:\/\/shop_images\/about-3.jpg",
-        "video_url": "https:\/\/www.youtube.com\/embed\/CxFQEdI3XvU",
-        "video_btn_color": "#ffffff",
-        "video_btn_hover_color": "#ffffff",
-        "video_btn_bg_color": "#f63d64",
-        "video_btn_bg_hover_color": "#222222",
-        "about1_subtitle_color": "#f63d64",
-        "about1_subtitle": "About Us",
-        "about1_title_color": "#222222",
-        "about1_title": "The Heighest Quality Of Products",
-        "about1_desc_color": "#666666",
-        "about1_desc": "Most journeys start with a series of questions. For us they were: why are \nwe paying so much for razors? Why are so many of us (a third of women \nto be exact) using men’s razors? Why can’t we find razors without animal \ningredients in them? We were confused. The campaigns showing girls in \nwhite bikinis shaving already hairless legs didn’t have the answers were looking for. Our interviews with hundreds of women on their shaving and \nhabits made it clear we weren’t alone. That was all needed to start going to the bottom with overlooked shaving glitch. All of that led to the birth of Estrid — a fierce and female-focused.",
-        "about1_btn_url": "#",
-        "about1_btn": "Shop Now",
-        "about1_us": "shopify:\/\/shop_images\/about-2.jpg",
-        "bg_color": "#f7f4ef",
-        "service_1": "shopify:\/\/shop_images\/01_f4102a83-faf3-40ff-b382-1c86ed30fcd0.png",
-        "service_title1_color": "#222222",
-        "service_title1": "Shop Worldwide",
-        "service_desc1_color": "#777777",
-        "service_desc1": "Excepteur sint occaecat cupidatat non proident,   sunt in culpa qui officia deserunt mollit anim id  est laborum.",
-        "service_2": "shopify:\/\/shop_images\/03_ae1b1ab7-5be1-41aa-87dc-98fb1d94d790.png",
-        "service_title2_color": "#222222",
-        "service_title2": "Big Saving Shop",
-        "service_desc2_color": "#777777",
-        "service_desc2": "Excepteur sint occaecat cupidatat non proident,   sunt in culpa qui officia deserunt mollit anim id  est laborum.",
-        "service_3": "shopify:\/\/shop_images\/02_58ae5806-80e1-44e7-a728-103f59cbbb07.png",
-        "service_title3_color": "#222222",
-        "service_title3": "24H 7D Support",
-        "service_desc3_color": "#777777",
-        "service_desc3": "Excepteur sint occaecat cupidatat non proident,   sunt in culpa qui officia deserunt mollit anim id  est laborum."
-      }
-    },
-    "team": {
-      "type": "aboutus-team",
-      "blocks": {
-        "1570173823217": {
-          "type": "text",
-          "settings": {
-            "image_1": "shopify:\/\/shop_images\/1.jpg",
-            "image_heading": "Lisa John",
-            "author_name": "Lisa John",
-            "author_designation": "Area Sales Manager",
-            "facebook": "",
-            "twitter": "",
-            "instagram": ""
-          }
+    "sections": {
+        "main": {
+            "type": "aboutus-page-img",
+            "settings": {
+                "about_subtitle_color": "#2da85c",
+                "about_subtitle": "Collection 2021",
+                "about_title_color": "#222222",
+                "about_title": "Best Organic Shop",
+                "about_desc_color": "#666666",
+                "about_desc": "Apparently we had reached a great height in the atmosphere, for the sky was a dead black and there a stars.",
+                "about_btn_url": "#",
+                "about_btn": "Shop Now",
+                "about_us": "shopify://shop_images/about-11.jpg",
+                "about_sub_title1_color": "#373737",
+                "about_sub_title1": "Welcome to Organic Food Store",
+                "about_sub_desc1_color": "#666666",
+                "about_sub_desc1": "With all his cruel ferocity and coldness there was an under of something in Tars Tarkas which he seemed ever battling to subdue. Could it be a of some human \ninstinct come back",
+                "about_sub_title2_color": "#373737",
+                "about_sub_title2": "Up to 40% Off  on All Items.",
+                "about_sub_desc2_color": "#666666",
+                "about_sub_desc2": "With all his cruel ferocity and coldness there was an under of something in Tars Tarkas which he seemed ever battling to subdue. Could it be a of some human instinct come back.",
+                "video_img": "shopify://shop_images/about-3.jpg",
+                "video_url": "https://www.youtube.com/embed/CxFQEdI3XvU",
+                "video_btn_color": "#ffffff",
+                "video_btn_hover_color": "#ffffff",
+                "video_btn_bg_color": "#2da85c",
+                "video_btn_bg_hover_color": "#222222",
+                "about1_subtitle_color": "#2da85c",
+                "about1_subtitle": "About Us",
+                "about1_title_color": "#222222",
+                "about1_title": "The Heighest Quality Of Products",
+                "about1_desc_color": "#666666",
+                "about1_desc": "Most journeys start with a series of questions. For us they were: why are \nwe paying so much for razors? Why are so many of us (a third of women \nto be exact) using men’s razors? Why can’t we find razors without animal \ningredients in them? We were confused. The campaigns showing girls in \nwhite bikinis shaving already hairless legs didn’t have the answers were looking for. Our interviews with hundreds of women on their shaving and \nhabits made it clear we weren’t alone. That was all needed to start going to the bottom with overlooked shaving glitch. All of that led to the birth of Estrid — a fierce and female-focused.",
+                "about1_btn_url": "#",
+                "about1_btn": "Shop Now",
+                "about1_us": "shopify://shop_images/about-2.jpg",
+                "bg_color": "#f7f4ef",
+                "service_1": "shopify://shop_images/01_f4102a83-faf3-40ff-b382-1c86ed30fcd0.png",
+                "service_title1_color": "#222222",
+                "service_title1": "Shop Worldwide",
+                "service_desc1_color": "#777777",
+                "service_desc1": "Excepteur sint occaecat cupidatat non proident,   sunt in culpa qui officia deserunt mollit anim id  est laborum.",
+                "service_2": "shopify://shop_images/03_ae1b1ab7-5be1-41aa-87dc-98fb1d94d790.png",
+                "service_title2_color": "#222222",
+                "service_title2": "Big Saving Shop",
+                "service_desc2_color": "#777777",
+                "service_desc2": "Excepteur sint occaecat cupidatat non proident,   sunt in culpa qui officia deserunt mollit anim id  est laborum.",
+                "service_3": "shopify://shop_images/02_58ae5806-80e1-44e7-a728-103f59cbbb07.png",
+                "service_title3_color": "#222222",
+                "service_title3": "24H 7D Support",
+                "service_desc3_color": "#777777",
+                "service_desc3": "Excepteur sint occaecat cupidatat non proident,   sunt in culpa qui officia deserunt mollit anim id  est laborum."
+            }
         },
-        "1570173875415": {
-          "type": "text",
-          "settings": {
-            "image_1": "shopify:\/\/shop_images\/2.jpg",
-            "image_heading": "John Buffer",
-            "author_name": "John Buffer",
-            "author_designation": "Director",
-            "facebook": "",
-            "twitter": "",
-            "instagram": ""
-          }
-        },
-        "1570173906227": {
-          "type": "text",
-          "settings": {
-            "image_1": "shopify:\/\/shop_images\/3.jpg",
-            "image_heading": "Sandra Ellips",
-            "author_name": "Sandra Ellips",
-            "author_designation": "Assistant Manager",
-            "facebook": "",
-            "twitter": "",
-            "instagram": ""
-          }
-        },
-        "1570174004731": {
-          "type": "text",
-          "settings": {
-            "image_1": "shopify:\/\/shop_images\/4.jpg",
-            "image_heading": "Craig Wilson",
-            "author_name": "Craig Wilson",
-            "author_designation": "Production Officer",
-            "facebook": "",
-            "twitter": "",
-            "instagram": ""
-          }
-        },
-        "1570173938187": {
-          "type": "text",
-          "settings": {
-            "image_1": "shopify:\/\/shop_images\/5.jpg",
-            "image_heading": "Sally Ramsey",
-            "author_name": "Sally Ramsey",
-            "author_designation": "Farm Manager",
-            "facebook": "",
-            "twitter": "",
-            "instagram": ""
-          }
-        },
-        "1570174049687": {
-          "type": "text",
-          "settings": {
-            "image_1": "shopify:\/\/shop_images\/6.jpg",
-            "image_heading": "Willie Bradley",
-            "author_name": "Willie Bradley",
-            "author_designation": "Marketing Officer",
-            "facebook": "",
-            "twitter": "",
-            "instagram": ""
-          }
+        "team": {
+            "type": "aboutus-team",
+            "blocks": {
+                "1570173823217": {
+                    "type": "text",
+                    "settings": {
+                        "image_1": "shopify://shop_images/1.jpg",
+                        "image_heading": "Lisa John",
+                        "author_name": "Lisa John",
+                        "author_designation": "Area Sales Manager",
+                        "facebook": "",
+                        "twitter": "",
+                        "instagram": ""
+                    }
+                },
+                "1570173875415": {
+                    "type": "text",
+                    "settings": {
+                        "image_1": "shopify://shop_images/2.jpg",
+                        "image_heading": "John Buffer",
+                        "author_name": "John Buffer",
+                        "author_designation": "Sales Officer",
+                        "facebook": "",
+                        "twitter": "",
+                        "instagram": ""
+                    }
+                },
+                "1570173906227": {
+                    "type": "text",
+                    "settings": {
+                        "image_1": "shopify://shop_images/3.jpg",
+                        "image_heading": "Sandra Ellips",
+                        "author_name": "Sandra Ellips",
+                        "author_designation": "Assistant Manager",
+                        "facebook": "",
+                        "twitter": "",
+                        "instagram": ""
+                    }
+                },
+                "1570174004731": {
+                    "type": "text",
+                    "settings": {
+                        "image_1": "shopify://shop_images/4.jpg",
+                        "image_heading": "Craig Wilson",
+                        "author_name": "Craig Wilson",
+                        "author_designation": "Production Officer",
+                        "facebook": "",
+                        "twitter": "",
+                        "instagram": ""
+                    }
+                },
+                "1570173938187": {
+                    "type": "text",
+                    "settings": {
+                        "image_1": "shopify://shop_images/5.jpg",
+                        "image_heading": "Sally Ramsey",
+                        "author_name": "Sally Ramsey",
+                        "author_designation": "Farm Manager",
+                        "facebook": "",
+                        "twitter": "",
+                        "instagram": ""
+                    }
+                },
+                "1570174049687": {
+                    "type": "text",
+                    "settings": {
+                        "image_1": "shopify://shop_images/6.jpg",
+                        "image_heading": "Willie Bradley",
+                        "author_name": "Willie Bradley",
+                        "author_designation": "Marketing Officer",
+                        "facebook": "",
+                        "twitter": "",
+                        "instagram": ""
+                    }
+                }
+            },
+            "block_order": ["1570173823217", "1570173875415", "1570173906227", "1570174004731", "1570173938187", "1570174049687"],
+            "settings": {
+                "subtitle": "Team Member",
+                "subtitle_color": "#2da85c",
+                "title": "Our Team",
+                "title_color": "#222222",
+                "ourteam_column": "5"
+            }
         }
-      },
-      "block_order": [
-        "1570173823217",
-        "1570173875415",
-        "1570173906227",
-        "1570174004731",
-        "1570173938187",
-        "1570174049687"
-      ],
-      "settings": {
-        "subtitle": "Team Member",
-        "subtitle_color": "#f63d64",
-        "title": "Our Team",
-        "title_color": "#222222",
-        "ourteam_column": "5"
-      }
-    }
-  },
-  "order": [
-    "main",
-    "team"
-  ]
+    },
+    "order": ["main", "team"]
 }
