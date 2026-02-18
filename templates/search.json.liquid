@@ -1,6 +1,7 @@
+{% assign easylockdownItemSelectorOff = true %}
 {% layout none %}
 {% capture results %}
-{% for item in search.results %}
+{% for item in search.results %}{% comment %}EasylockdownFilterBegin{% endcomment %}{% capture easylockdownFilter %}{% render 'easylockdown_filter_search' with item, easylockdownRender: true, easylockdownItemSelectorOff: easylockdownItemSelectorOff %}{% endcapture %}{% assign easylockdownFilter = easylockdownFilter | strip %}{% if easylockdownFilter == 'continue' %}{% continue %}{% else %}{{ easylockdownFilter }}{% endif %}{% comment %}EasylockdownFilterEnd{% endcomment %}
 {% assign product = item %}
 {%- assign compare_at_price = product.compare_at_price -%}
 {%- assign price_varies = product.price_varies -%}
