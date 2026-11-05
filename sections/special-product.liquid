@@ -19,7 +19,7 @@
         <div id="{{ section.settings.class }}_products_slider" data-col="{{ section.settings.product_col }}"  class="contents tab-pane slider-specialproduct grid grid--view-items owl-carousel owl-theme" data-col="{{ section.settings.product_col }}">
           {% for product in collection.products limit: product_limit %}                
            <div class="{{ grid_item_width }}">
-                {% render 'product-card-grid', grid_image_width: image_size, collection: collection. product: product %}
+                {% render 'product-card-grid', grid_image_width: image_size, collection: collection, product: product %}
               </div>
           {% else %}
           {% for i in (1..product_limit) %}
@@ -117,4 +117,15 @@
 }
 ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'product-card-grid', grid_image_width: image_size, collection:
+    collection. product: product %}"
+  to: "{% render 'product-card-grid', grid_image_width: image_size, collection: collection,
+    product: product %}"
+  position: 1326..1430
+{%- endcomment -%}

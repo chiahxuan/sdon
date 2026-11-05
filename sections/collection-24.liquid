@@ -14,7 +14,7 @@ The contents of the collection.liquid template can be found in /sections/collect
         {% if settings.collections_masonry %}  
         {% render 'product-masonry',products_per_page: 24 ,results: collection, enable_sorting: section.settings.enable_sorting %}
         {% else %}
-        {% render 'collection-template',,products_per_page: 24 ,results: collection, enable_sorting: section.settings.enable_sorting %}
+        {% render 'collection-template', products_per_page: 24, results: collection, enable_sorting: section.settings.enable_sorting %}
         {% endif %}
       </div>
     </div>
@@ -246,4 +246,15 @@ The contents of the collection.liquid template can be found in /sections/collect
 }
 ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'collection-template',,products_per_page: 24 ,results: collection,
+    enable_sorting: section.settings.enable_sorting %}"
+  to: "{% render 'collection-template', products_per_page: 24, results: collection,
+    enable_sorting: section.settings.enable_sorting %}"
+  position: 764..891
+{%- endcomment -%}
